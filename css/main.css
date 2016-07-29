@@ -1,0 +1,209 @@
+body {
+    background-color: #E0E0DE !important;
+}
+#header {
+    display: block;
+    height: 200px;
+    max-width: 100%;
+    margin: 0;
+    padding-top: 30px;
+    /*background-image: url("../img/header.PNG");*/
+    background-image: -webkit-linear-gradient(left, #48d0cc, #ffa711); /* For Chrome and Safari */
+    background-image: -moz-linear-gradient(left, #48d0cc, #ffa711); /* For old Fx (3.6 to 15) */
+    background-image: -ms-linear-gradient(left, #48d0cc, #ffa711); /* For pre-releases of IE 10*/
+    background-image: -o-linear-gradient(left, #48d0cc, #ffa711); /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(to right, #48d0cc, #ffa711); /* Standard syntax; must be last */
+    overflow-x: hidden !important;
+}
+#header div {
+    text-align: center;
+}
+#headerContent div h1 {
+    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 50px;
+}
+#headerContent p {
+    color: black;
+    font-size: 30px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.inputContainer {
+    /*
+    border-style: solid;
+    border-width: 5px;
+    */
+    width: 450px;
+    height: 340px;
+    background-color: #75A9F9;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 140px;
+    margin-bottom: 30px;
+}
+#yearDiv {
+    /*background-color: #48D0CC;*/
+    background-image: -webkit-linear-gradient(left, #48d0cc, #ffa711); /* For Chrome and Safari */
+    background-image: -moz-linear-gradient(left, #48d0cc, #ffa711); /* For old Fx (3.6 to 15) */
+    background-image: -ms-linear-gradient(left, #48d0cc, #ffa711); /* For pre-releases of IE 10*/
+    background-image: -o-linear-gradient(left, #48d0cc, #ffa711); /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(to right, #48d0cc, #ffa711); /* Standard syntax; must be last */
+}
+/*
+#genreDiv {
+    background-color: #FFA711;
+}
+*/
+
+.selectDiv {
+    padding-top: 10px;
+    padding-left: 90px;
+    padding-right: 40px;
+}
+#yearLabel {
+    margin-top: 10px !important;
+    margin-bottom: 25px;
+}
+.selectDiv label {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+select {
+    height: 45px;
+    padding: 5px;
+    padding-right: 9px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color: #888;
+    outline: none;
+    display: inline-block;
+    /*-webkit-appearance: none;*/
+    border: none;
+    cursor: pointer;
+    font-size: 40px !important;
+}
+select {
+    display: block;
+    width: 210px;
+    font-size: 40px;
+    height: 60px;
+}
+.selectDiv p {
+    color: white;
+    /*font-family: Verdana, Geneva, sans-serif;*/
+    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+#yearText {
+    margin-top: 8px;
+}
+#letsgo {
+    width: 300px;
+    height: 100px;
+    font-size: 50px;
+    font-family: font-family: Palatino, "Palatino LT STD",
+    "Palatino Linotype", "Book Antiqua", Georgia, serif;    
+}
+#buttonContainer {
+    text-align: center;
+}
+
+h1 {
+    color: black !important;
+}
+a:hover {
+    color: black !important;
+    text-decoration: none !important;
+}
+.dropdownContainer {
+    padding: none;
+    max-width: 1920px;
+    max-height: 200px;
+    border-style: solid;
+    border-width: 5px;
+}
+#playlistLink {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+    color: grey;
+}
+.selectSpan {
+    display: block;
+}
+.dropdownSelect {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+section {
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: static;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 5px;
+}
+@media all and (max-width: 1710px;) {
+    section {
+        width: 1710px;
+    }
+}
+@media screen and (max-width: 1710px) {
+    section {
+        width: 1100px;
+    }
+}
+@media screen and (max-width: 1110px) {
+    section {
+        width: 550px;
+    }
+}
+/* Smartphones (portrait and landscape) */
+@media only screen and (max-width : 510px) {
+    #header {
+        height: 170px;
+    }
+    #header div h1, #header div p  {
+        font-size: 20px;
+    }
+    #yearText {
+        font-size: 20px;
+    }
+    .inputContainer {
+        height: 200px;
+    }
+    #yearLabel {
+        font-size: 12px;
+    }
+    #playlistLink {
+        display: none;
+    }
+}
+footer {
+    display: block;
+    height: 200px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /*background-image: url("../img/header.PNG");*/
+    background-image: -webkit-linear-gradient(left, #48d0cc, #ffa711); /* For Chrome and Safari */
+    background-image: -moz-linear-gradient(left, #48d0cc, #ffa711); /* For old Fx (3.6 to 15) */
+    background-image: -ms-linear-gradient(left, #48d0cc, #ffa711); /* For pre-releases of IE 10*/
+    background-image: -o-linear-gradient(left, #48d0cc, #ffa711); /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(to right, #48d0cc, #ffa711); /* Standard syntax; must be last */
+    overflow: hidden !important;
+}
