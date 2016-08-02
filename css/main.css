@@ -156,10 +156,11 @@ section {
     overflow: hidden;
     border-style: solid;
     border-width: 5px;
+    padding-left: 15px;
 }
 iframe {
-    width: 530px;
-    height: 298px;
+    width: 500px !important;
+    height: 298px !important;
     float: left;
     margin: 10px;
     background-size: cover;
