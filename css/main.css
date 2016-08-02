@@ -157,6 +157,15 @@ section {
     border-style: solid;
     border-width: 5px;
 }
+iframe {
+    width: 530px;
+    height: 298px;
+    float: left;
+    margin: 10px;
+    background-size: cover;
+    background-position: 0px -50px;
+    background-repeat: none;
+}
 @media all and (max-width: 1710px;) {
     section {
         width: 1710px;
