@@ -40,6 +40,10 @@ body {
     margin-top: 140px;
     margin-bottom: 30px;
 }
+#playlistContainer {
+    width: 150px;
+    margin: 0 auto;
+}
 #yearDiv {
     /*background-color: #48D0CC;*/
     background-image: -webkit-linear-gradient(left, #48d0cc, #ffa711); /* For Chrome and Safari */
