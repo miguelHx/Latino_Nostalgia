@@ -133,8 +133,6 @@ a:hover {
     padding: none;
     max-width: 1920px;
     max-height: 200px;
-    border-style: solid;
-    border-width: 5px;
 }
 #playlistLink {
     font-size: 20px;
@@ -158,8 +156,6 @@ section {
     display: block;
     position: static;
     overflow: hidden;
-    border-style: solid;
-    border-width: 5px;
     padding-left: 15px;
 }
 iframe {
