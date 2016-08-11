@@ -158,14 +158,33 @@ section {
     overflow: hidden;
     padding-left: 15px;
 }
-iframe {
-    width: 500px !important;
-    height: 298px !important;
+.video {
+    width: 500px;
+    height: 430px;
     float: left;
     margin: 10px;
     background-size: cover;
     background-position: 0px -50px;
     background-repeat: none;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: white;
+}
+.video-text-container {
+    
+}
+.video-text {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+iframe {
+    width: 498px;
+    height: 350px !important;
+    border-style: solid;
+    border-radius: 8px;
+    /*float: left;*/
+    
 }
 @media all and (max-width: 1710px;) {
     section {
