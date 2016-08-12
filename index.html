@@ -91,11 +91,6 @@
             window.location = "year/" + getYear() + ".html";
         });
 
-        function formSubmit() { // function to be called when form is submitted
-            alert("Form submitted");
-            return false;
-        };
-
         function getYear() { // function that gets the text inside a genre option
             var choice = $("#yearSelect option:selected").text();
             return choice;
