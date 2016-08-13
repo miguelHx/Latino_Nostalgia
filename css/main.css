@@ -172,7 +172,8 @@ section {
 }
 .video {
     height: 350px;
-    background-color: red;
+    width: 500px;
+    border-radius: 10px;
 }
 .video-text-container {
     height: 70px;
