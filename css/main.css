@@ -1,5 +1,5 @@
 body {
-    background-color: #E0E0DE !important;
+    background-color: #E0E0E0;
 }
 #header {
     display: block;
@@ -162,36 +162,38 @@ section {
     width: 500px;
     height: 430px;
     float: left;
-    margin: 10px;
+    margin: 12px;
     background-size: cover;
     background-position: 0px -50px;
     background-repeat: none;
-    border: 1px solid;
-    border-radius: 10px;
     background-color: white;
 }
 .video {
     height: 350px;
     width: 500px;
-    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 500px 350px;
 }
 .video-text-container {
-    height: 70px;
-    max-height: 70px;
+    height: 85px;
+    max-height: 100px;
     max-width: 500px;
+    width: 500px;
     display: flex;
 /*  flex-direction: column;*/
     align-items: center;
 /*  justify-content: cener;*/
+    border: solid 1px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .video-text {
     margin: 0 auto;
     font-size: 20px;
 }
 iframe {
-    width: 498px;
+    width: 500px !important;
     height: 350px !important;
-    border-radius: 8px;
     /*float: left;*/
     
 }
@@ -230,6 +232,9 @@ iframe {
     #playlistLink {
         display: none;
     }
+}
+.hidden {
+    display: none;
 }
 footer {
     display: block;
