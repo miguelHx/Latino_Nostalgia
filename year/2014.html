@@ -13,6 +13,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <script src="http://cdn.embed.ly/jquery.embedly-3.1.2.min.js" type="text/javascript"></script>
 
 </head>
 
@@ -77,23 +79,19 @@
     </div>
     <section class="videos">
 
-        <div class="video-container"> <iframe src="https://www.youtube.com/embed/bdOXnTbyk0g" frameborder="0" allowfullscreen></iframe><div class="video-text-container"><span class="video-text"><strong>Darte Un Beso</strong> - Prince Royce</span></div></div>
+        <div class="video-container"><div class="video" onclick="loadVid($(this));" data-id="NUsoVlDFqZg"><a href="https://www.youtube.com/watch?v=NUsoVlDFqZg"></a></div><div class="video-text-container"><span class="video-text"><strong>Bailando</strong> - Enrique Iglesias</span></div></div>
+
+        <div class="video-container"><div class="video" onclick="loadVid($(this));" data-id="jk4HYngf65w"><a href="https://www.youtube.com/watch?v=jk4HYngf65w"></a></div><div class="video-text-container"><span class="video-text"><strong>Cancioncitas de Amor</strong> - Romeo Santos</span></div></div>
+
+        <div class="video-container"><div class="video" onclick="loadVid($(this));" data-id="OxxggwHFj7M"><a href="https://www.youtube.com/watch?v=OxxggwHFj7M"></a></div><div class="video-text-container"><span class="video-text"><strong>Travesuras (Original)</strong> - Nicky Jam</span></div></div>
+
+        <div class="video-container"><div class="video" onclick="loadVid($(this));" data-id="8iPcqtHoR3U"><a href="https://www.youtube.com/watch?v=8iPcqtHoR3U"></a></div><div class="video-text-container"><span class="video-text"><strong>Eres Mia</strong> - Romeo Santos</span></div></div>
+
+        <div class="video-container"><div class="video" onclick="loadVid($(this));" data-id="ME2Hufquz0k"><a href="https://www.youtube.com/watch?v=ME2Hufquz0k"></a></div><div class="video-text-container"><span class="video-text"><strong>Adrenalina</strong> - Wisin ft. Jennifer Lopez & Ricky Martin</span></div></div>
+
+        <div class="video-container"><div class="video" onclick="loadVid($(this));" data-id="TEmHuISQnNw"><a href="https://www.youtube.com/watch?v=TEmHuISQnNw"></a></div><div class="video-text-container"><span class="video-text"><strong>Por Fin</strong> - Pablo Alboran</span></div></div>
 
 
-
-        <div class="video-container"><div class="video" onclick="loadVideo($(this));" data-id="NUsoVlDFqZg"></div><div class="video-text-container"><span class="video-text"><strong>Song title</strong> - Song artist</span></div></div>
-
-<!--
-        <div class="video-container" onclick="loadVideo($(this));" data-id="jk4HYngf65w"></div>
-
-        <div class="video-container" onclick="loadVideo($(this));" data-id="cpLZeSigNvY"></div>
-
-        <div class="video-container" onclick="loadVideo($(this));" data-id="8iPcqtHoR3U"></div>
-
-        <div class="video-container" onclick="loadVideo($(this));" data-id="ME2Hufquz0k"></div>
-
-        <div class="video-container" onclick="loadVideo($(this));" data-id="TEmHuISQnNw"></div>
--->
 
     </section>
 
@@ -151,7 +149,8 @@
     </div>
 
 
-    <footer> 
+
+<footer> 
     
 
 
@@ -160,29 +159,8 @@
 
 
 
+</footer>
 
-
-
-    </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="../js/jquery.min.js"></script>
 
     <script type="text/javascript">
         function change_url(val) {
@@ -192,17 +170,11 @@
             window.location = val;
         }
 
-        function getYear() { // function that gets the text inside a genre option
-            var choice = $(".select_change_page option:selected").text();
-            return choice;
-        };
-
-        alert("hellow");
-
     </script>
 
 
     <script src="../js/embedvideo.js" type="text/javascript"></script>
+
     <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 
