@@ -158,7 +158,7 @@ section {
     overflow: hidden;
     padding-left: 15px;
 }
-.video {
+.video-container {
     width: 500px;
     height: 430px;
     float: left;
@@ -170,9 +170,13 @@ section {
     border-radius: 10px;
     background-color: white;
 }
+.video {
+    height: 360px;
+    background-color: red;
+}
 .video-text-container {
     height: 70px;
-    max-height: 100px;
+    max-height: 70px;
     max-width: 500px;
     display: flex;
 /*  flex-direction: column;*/
