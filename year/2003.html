@@ -8,12 +8,2019 @@
     <title>Nostalgia Engine</title>
     <meta name="Author-Miguel Hernandez" content="">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <script src="http://cdn.embed.ly/jquery.embedly-3.1.2.min.js" type="text/javascript"></script>
 
 </head>
 
 <body>
 
-    <h1>You have been redirected properly!</h1>
+    <div id="header">
+        <div id="headerContent">
+            <div>
+                <a href="../index.html"><h1>Latino Nostalgia</h1></a>
+                <p><em>Relive the past / Revivé el pasado</em></p>
+                <p>2003</p>
+            </div>
+        </div>
+    </div>
+    <div class= "dropdownContainer">
+        <div class="dropdownSelect">
+            <div id="playlistContainer"><a href="#" target="_blank" id="playlistLink"><em>Open year as a playlist</em></a></div>
+            <form id="choice">
+            <label>
+                <span class="selectSpan">
+                <select class="select_change_page" onchange="change_url(this.value);">
+                    <option>Año/Year</option>
+                    <option value="2014.html">2014</option>
+                    <option value="2013.html">2013</option>
+                    <option value="2012.html">2012</option>
+                    <option value="2011.html">2011</option>
+                    <option value="2010.html">2010</option>
+                    <option value="2009.html">2009</option>
+                    <option value="2008.html">2008</option>
+                    <option value="2007.html">2007</option>
+                    <option value="2006.html">2006</option>
+                    <option value="2005.html">2005</option>
+                    <option value="2004.html">2004</option>
+                    <option value="2003.html">2003</option>
+                    <option value="2002.html">2002</option>
+                    <option value="2001.html">2001</option>
+                    <option value="2000.html">2000</option>
+                    <option value="1999.html">1999</option>
+                    <option value="1998.html">1998</option>
+                    <option value="1997.html">1997</option>
+                    <option value="1996.html">1996</option>
+                    <option value="1995.html">1995</option>
+                    <option value="1994.html">1994</option>
+                    <option value="1993.html">1993</option>
+                    <option value="1992.html">1992</option>
+                    <option value="1991.html">1991</option>
+                    <option value="1990.html">1990</option>
+                    <option value="1989.html">1989</option>
+                    <option value="1988.html">1988</option>
+                    <option value="1987.html">1987</option>
+                    <option value="1986.html">1986</option>
+                    <option value="1985.html">1985</option>
+                    <option value="1984.html">1984</option>
+                    <option value="1983.html">1983</option>
+                    <option value="1982.html">1982</option>
+                    <option value="1981.html">1981</option>
+                    <option value="1980.html">1980</option>
+                </select>
+                </span>
+            </label>
+            </form>
+        </div>
+    </div>
+    <section class="videos">
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="mVYQSAm8hB0">
+            <a href="https://www.youtube.com/watch?v=mVYQSAm8hB0"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Hermanita</strong> - Aventura</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="_BYSXHSe2t8">
+            <a href="https://www.youtube.com/watch?v=_BYSXHSe2t8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Rosas</strong> - La Oreja De Van Gogh</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="F5-oCyBQW8k">
+            <a href="https://www.youtube.com/watch?v=F5-oCyBQW8k"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Primer Millon</strong> - Bacilos</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="iquutmpRKQI">
+            <a href="https://www.youtube.com/watch?v=iquutmpRKQI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Arranca En Fa!</strong> - Limi-t 21</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="y7NvfRWbARY">
+            <a href="https://www.youtube.com/watch?v=y7NvfRWbARY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Derrota</strong> - Beto Y Sus Canarios</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="PdZpRJEpupc">
+            <a href="https://www.youtube.com/watch?v=PdZpRJEpupc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>La Salsa Vive</strong> - Tito Nieves Featuring Celia Cruz, Gilberto Santa Rosa, Cheo Feliciano y Ismael Miranda</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="TiuTgJm_kAE">
+            <a href="https://www.youtube.com/watch?v=TiuTgJm_kAE"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Angel De Amor</strong> - Mana</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="HrGiglG0IHU">
+            <a href="https://www.youtube.com/watch?v=HrGiglG0IHU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Asereje</strong> - La Onda</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="Wlyaug3o8wI">
+            <a href="https://www.youtube.com/watch?v=Wlyaug3o8wI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Por Mas Que Intento</strong> - Gilberto Santa Rosa</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="XwSEbihvTmE">
+            <a href="https://www.youtube.com/watch?v=XwSEbihvTmE"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Y Como Quieres Que Te Quiera</strong> - Fabian Gomez</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="0z_huJrIPDo">
+            <a href="https://www.youtube.com/watch?v=0z_huJrIPDo"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>El Amor No Tiene Edad</strong> - El Coyote Y Su Banda Tierra Santa</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="x9YzpFyCmt8">
+            <a href="https://www.youtube.com/watch?v=x9YzpFyCmt8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Tan Buena</strong> - Son De Cali</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="KZFAD236Ge4">
+            <a href="https://www.youtube.com/watch?v=KZFAD236Ge4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Una Vez Mas</strong> - Conjunto Primavera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="qM1yOg1GhiY">
+            <a href="https://www.youtube.com/watch?v=qM1yOg1GhiY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mala Gente</strong> - Juanes</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="gxCz8I3RrWI">
+            <a href="https://www.youtube.com/watch?v=gxCz8I3RrWI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Esclavo De Tu Piel</strong> - Ricardo Castillon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="kX6B4v2jeI0">
+            <a href="https://www.youtube.com/watch?v=kX6B4v2jeI0"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Me Rendire</strong> - Jaci Velasquez Y Pablo Portillo</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="fleU-3RIgRs">
+            <a href="https://www.youtube.com/watch?v=fleU-3RIgRs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Sirena</strong> - Sin Bandera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="QMCiDBEFJ9I">
+            <a href="https://www.youtube.com/watch?v=QMCiDBEFJ9I"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Enamorate De Alguien</strong> - El Poder Del Norte</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="rJs-FmdM4Q4">
+            <a href="https://www.youtube.com/watch?v=rJs-FmdM4Q4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Tengo Dinero</strong> - A.b. Quintanilla Iii y Kumbia Kings Feat. Juan Gabriel y El Gran Silencio</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="l2Masbr8lNo">
+            <a href="https://www.youtube.com/watch?v=l2Masbr8lNo"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Sin Fortuna</strong> - Lupillo Rivera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="-iu1JEJ83MQ">
+            <a href="https://www.youtube.com/watch?v=-iu1JEJ83MQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>En Cuerpo Y Alma</strong> - Millie</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="sVjQK7IvQeo">
+            <a href="https://www.youtube.com/watch?v=sVjQK7IvQeo"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Micaela</strong> - Dueto Voces Del Rancho</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="g6XbgVTPAFg">
+            <a href="https://www.youtube.com/watch?v=g6XbgVTPAFg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Una Oracion</strong> - Pancho Barraza</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="vcuTmun9W7Y">
+            <a href="https://www.youtube.com/watch?v=vcuTmun9W7Y"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Siento</strong> - Ilegales</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="AuYW5nCOo38">
+            <a href="https://www.youtube.com/watch?v=AuYW5nCOo38"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Herida Mortal</strong> - Jerry Rivera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="BS52nwqFu_E">
+            <a href="https://www.youtube.com/watch?v=BS52nwqFu_E"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>El Baile De La Toallita</strong> - Joel Higuera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="gJwfTXQdUto">
+            <a href="https://www.youtube.com/watch?v=gJwfTXQdUto"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>El Tonto Que No Te Olvido</strong> - Victor Manuelle</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ESBMw9-ht2o">
+            <a href="https://www.youtube.com/watch?v=ESBMw9-ht2o"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Dos Locos</strong> - Monchy y Alexandra</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="JoekCiKHMHE">
+            <a href="https://www.youtube.com/watch?v=JoekCiKHMHE"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Valgo Nada</strong> - Pesado</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="jCPxq9gjzWs">
+            <a href="https://www.youtube.com/watch?v=jCPxq9gjzWs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>A Quien Le Importa?</strong> - Thalia</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="F154PPRV0YU">
+            <a href="https://www.youtube.com/watch?v=F154PPRV0YU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Soldado</strong> - Los Tigres Del Norte</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="0d085NeOV6Y">
+            <a href="https://www.youtube.com/watch?v=0d085NeOV6Y"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Digale</strong> - David Bisbal</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="w0H0pgl5x8A">
+            <a href="https://www.youtube.com/watch?v=w0H0pgl5x8A"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Dame</strong> - Ricardo Arjona</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="WxfFmjJLjOc">
+            <a href="https://www.youtube.com/watch?v=WxfFmjJLjOc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Entre El Delirio Y La Locura</strong> - Jennifer Pena</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="uf7E4Q9sejA">
+            <a href="https://www.youtube.com/watch?v=uf7E4Q9sejA"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Ayudame</strong> - Lourdes Robles</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="txfEsWvFiCs">
+            <a href="https://www.youtube.com/watch?v=txfEsWvFiCs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Nina Amada Mia</strong> - Alejandro Fernandez</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="LWNXkkEL7xI">
+            <a href="https://www.youtube.com/watch?v=LWNXkkEL7xI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Kilometros</strong> - Sin Bandera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="qUzWqqk4LFk">
+            <a href="https://www.youtube.com/watch?v=qUzWqqk4LFk"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Entrega Total</strong> - Pablo Montero</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="GQ98pGooXxs">
+            <a href="https://www.youtube.com/watch?v=GQ98pGooXxs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Te Vas Amor</strong> - El Coyote Y Su Banda Tierra Santa</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="uLDiBRzt7eM">
+            <a href="https://www.youtube.com/watch?v=uLDiBRzt7eM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Alucinado</strong> - Tiziano Ferro</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="jHpAITa9lw8">
+            <a href="https://www.youtube.com/watch?v=jHpAITa9lw8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Serenata Huasteca</strong> - Adan Chalino Sanchez</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="hOKxM_GWS3M">
+            <a href="https://www.youtube.com/watch?v=hOKxM_GWS3M"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Quiero Que Seamos Novios</strong> - Los Tucanes De Tijuana</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="jgsS-pgu86k">
+            <a href="https://www.youtube.com/watch?v=jgsS-pgu86k"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Clavame Tu Amor</strong> - Noelia</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="pzhF-MDQZS4">
+            <a href="https://www.youtube.com/watch?v=pzhF-MDQZS4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Se Vivir Sin Ti</strong> - Los Temerarios</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="xXm8MIxdgww">
+            <a href="https://www.youtube.com/watch?v=xXm8MIxdgww"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Amame</strong> - Alexandre Pires</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="oyjWuDueYbw">
+            <a href="https://www.youtube.com/watch?v=oyjWuDueYbw"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Chaparrita De Mi Vida</strong> - Los Rieleros Del Norte</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="1hUAs-YonSU">
+            <a href="https://www.youtube.com/watch?v=1hUAs-YonSU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Muy A Tu Manera</strong> - Intocable</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="P2PsqeU4fpQ">
+            <a href="https://www.youtube.com/watch?v=P2PsqeU4fpQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Quedate Callada</strong> - Jorge Luis Cabrera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="OGRhKFLU4L8">
+            <a href="https://www.youtube.com/watch?v=OGRhKFLU4L8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Que Levante La Mano</strong> - Joseph Fonseca</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ghru0JjghY8">
+            <a href="https://www.youtube.com/watch?v=ghru0JjghY8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Con Ella</strong> - Cristian</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="fyNPWxU2OKc">
+            <a href="https://www.youtube.com/watch?v=fyNPWxU2OKc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Para Que La Vida</strong> - Enrique Iglesias</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ws6gXsP6SRs">
+            <a href="https://www.youtube.com/watch?v=ws6gXsP6SRs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Frio De Ausencia</strong> - Banda Pelillos</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="av3wkasS-WQ">
+            <a href="https://www.youtube.com/watch?v=av3wkasS-WQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mariposa Traicionera</strong> - Mana</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="lqxffbKYphA">
+            <a href="https://www.youtube.com/watch?v=lqxffbKYphA"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Por Amor</strong> - Jon Secada With Gloria Estefan</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="vEQdqJdjFVM">
+            <a href="https://www.youtube.com/watch?v=vEQdqJdjFVM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Amante</strong> - Valentin Elizalde</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="Yx3d9t4C50g">
+            <a href="https://www.youtube.com/watch?v=Yx3d9t4C50g"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Tal Vez</strong> - Ricky Martin</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="7O9PWmvlwlw">
+            <a href="https://www.youtube.com/watch?v=7O9PWmvlwlw"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Si Te Dijeron</strong> - Gilberto Santa Rosa</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="b5fFK220Ceg">
+            <a href="https://www.youtube.com/watch?v=b5fFK220Ceg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Seran Sus Ojos</strong> - Adolfo Urias Y Su Lobo Norteno</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ASaT_gVOdMM">
+            <a href="https://www.youtube.com/watch?v=ASaT_gVOdMM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Me Falta Valor</strong> - Pepe Aguilar</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="QCWSKim3SPU">
+            <a href="https://www.youtube.com/watch?v=QCWSKim3SPU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Ex</strong> - Los Tucanes De Tijuana</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="HdLcnTM324w">
+            <a href="https://www.youtube.com/watch?v=HdLcnTM324w"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Margarita, Margarita</strong> - Candido Y Su Huella Nortena</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="UPeE5Jfd0lA">
+            <a href="https://www.youtube.com/watch?v=UPeE5Jfd0lA"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Los Demas</strong> - Julio</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="kkAanHiKF5A">
+            <a href="https://www.youtube.com/watch?v=kkAanHiKF5A"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Voy A Llorar</strong> - Cuisillos De Arturo Macias</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="DRutEvSFKnc">
+            <a href="https://www.youtube.com/watch?v=DRutEvSFKnc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Hablame Claro</strong> - Pancho Barraza</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="1wAklw9UWSI">
+            <a href="https://www.youtube.com/watch?v=1wAklw9UWSI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Tu Amor O Tu Desprecio</strong> - Marco Antonio Solis</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="IYpwOsS0mtU">
+            <a href="https://www.youtube.com/watch?v=IYpwOsS0mtU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Aca Entre Nos</strong> - Banda El Recodo</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="KI6bKSKWDgM">
+            <a href="https://www.youtube.com/watch?v=KI6bKSKWDgM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>El Sinverguenza</strong> - Los Tucanes De Tijuana</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="LWYnEnW31Yw">
+            <a href="https://www.youtube.com/watch?v=LWYnEnW31Yw"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Pequena Y Fragil</strong> - Control</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="BJhj7KrrPSg">
+            <a href="https://www.youtube.com/watch?v=BJhj7KrrPSg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Vete Ya</strong> - Valentin Elizalde</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ABq9Kp5dia4">
+            <a href="https://www.youtube.com/watch?v=ABq9Kp5dia4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Baila Casanova</strong> - Paulina Rubio</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="uoxVt6Lbtuw">
+            <a href="https://www.youtube.com/watch?v=uoxVt6Lbtuw"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Hace Falta Un Hombre</strong> - Jaci Velasquez</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="7mGO_tyoYsA">
+            <a href="https://www.youtube.com/watch?v=7mGO_tyoYsA"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Por Amor</strong> - Jon Secada</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="DkQJSP_hRbc">
+            <a href="https://www.youtube.com/watch?v=DkQJSP_hRbc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Casi</strong> - Soraya</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="A73f--Bposg">
+            <a href="https://www.youtube.com/watch?v=A73f--Bposg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Lamento</strong> - Gian Marco</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="qTXJCLl44yY">
+            <a href="https://www.youtube.com/watch?v=qTXJCLl44yY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Lo Que Yo Tuve Contigo</strong> - Jose Feliciano</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="HL7TI0aUgLY">
+            <a href="https://www.youtube.com/watch?v=HL7TI0aUgLY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Hoy Es Adios</strong> - Santana Featuring Alejandro Lerner</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="H6UR8bBCRW4">
+            <a href="https://www.youtube.com/watch?v=H6UR8bBCRW4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Que Pena</strong> - Graciela Beltran</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="flr8vDQ9Wuc">
+            <a href="https://www.youtube.com/watch?v=flr8vDQ9Wuc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Fotografia</strong> - Juanes Featuring Nelly Furtado</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="F7gVHLveJWI">
+            <a href="https://www.youtube.com/watch?v=F7gVHLveJWI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Podras</strong> - Olga Tanon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="Pj2POEcyaWc">
+            <a href="https://www.youtube.com/watch?v=Pj2POEcyaWc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>El General</strong> - Joan Sebastian</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="6_bi9nwyyZg">
+            <a href="https://www.youtube.com/watch?v=6_bi9nwyyZg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Maria Chuchena (maria Susena)</strong> - Los Razos</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="LYduJw5LyFM">
+            <a href="https://www.youtube.com/watch?v=LYduJw5LyFM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>American Life</strong> - Madonna</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="dHXF6f1MBeI">
+            <a href="https://www.youtube.com/watch?v=dHXF6f1MBeI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Traicion</strong> - India</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="mGvLEJczbyk">
+            <a href="https://www.youtube.com/watch?v=mGvLEJczbyk"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Una Emocion Para Siempre</strong> - Eros Ramazzotti</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="L2dYAAAIQWg">
+            <a href="https://www.youtube.com/watch?v=L2dYAAAIQWg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Soy Asi</strong> - Limite</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="0zQf_lik0m8">
+            <a href="https://www.youtube.com/watch?v=0zQf_lik0m8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Como Olvidarte</strong> - Costumbre</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="XZnHvGK4X0w">
+            <a href="https://www.youtube.com/watch?v=XZnHvGK4X0w"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Te La Vas A Acabar</strong> - Pesado</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="J1-IOCrEaLw">
+            <a href="https://www.youtube.com/watch?v=J1-IOCrEaLw"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Se Nos Perdio El Amor</strong> - El Gran Combo De Puerto Rico</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="iAgGxt2DpTg">
+            <a href="https://www.youtube.com/watch?v=iAgGxt2DpTg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Asi Te Quiero</strong> - Joan Sebastian</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ArXiN8qMUBw">
+            <a href="https://www.youtube.com/watch?v=ArXiN8qMUBw"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>En Que Falle?</strong> - Los Tigres Del Norte</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="dls5-etfIGM">
+            <a href="https://www.youtube.com/watch?v=dls5-etfIGM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Que Ganas</strong> - Ricardo Montaner</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="v2UMD3EckjA">
+            <a href="https://www.youtube.com/watch?v=v2UMD3EckjA"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Son Tus Perfumenes Mujer</strong> - Lupillo Rivera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="Kr-LJO3ZxMo">
+            <a href="https://www.youtube.com/watch?v=Kr-LJO3ZxMo"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Hoy Empieza Mi Tristeza</strong> - Grupo Montez De Durango</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="4Q9RZ113R5A">
+            <a href="https://www.youtube.com/watch?v=4Q9RZ113R5A"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Llorare Las Penas</strong> - David Bisbal</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="sUx8-Qvi3yg">
+            <a href="https://www.youtube.com/watch?v=sUx8-Qvi3yg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Se Me Olvido Tu Nombre</strong> - Shalim</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="zabXKRUYMYA">
+            <a href="https://www.youtube.com/watch?v=zabXKRUYMYA"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Barrio Viejo</strong> - Joan Sebastian</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="UBFJQeqWRIY">
+            <a href="https://www.youtube.com/watch?v=UBFJQeqWRIY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Sueltalo</strong> - Millie</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="oCp31huAmN4">
+            <a href="https://www.youtube.com/watch?v=oCp31huAmN4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Ya No Es Igual</strong> - Frankie J</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="v2UMD3EckjA">
+            <a href="https://www.youtube.com/watch?v=v2UMD3EckjA"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Son Tus Perjumenes Mujer</strong> - Lupillo Rivera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="p9sIMp8h_FE">
+            <a href="https://www.youtube.com/watch?v=p9sIMp8h_FE"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Hay Manera</strong> - Akwid</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="0cjRAj1bk3U">
+            <a href="https://www.youtube.com/watch?v=0cjRAj1bk3U"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Jaleo</strong> - Ricky Martin</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="4MB0CmrADaU">
+            <a href="https://www.youtube.com/watch?v=4MB0CmrADaU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Puedes Contar Conmigo</strong> - La Oreja De Van Gogh</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="yIvRyZiViYk">
+            <a href="https://www.youtube.com/watch?v=yIvRyZiViYk"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Actos De Un Tonto</strong> - Conjunto Primavera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="cgTuDu8sLZQ">
+            <a href="https://www.youtube.com/watch?v=cgTuDu8sLZQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Quizas Si, Quizas No</strong> - Grupo Bryndis</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="reBJwP-jyoc">
+            <a href="https://www.youtube.com/watch?v=reBJwP-jyoc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>La Pila De Agua</strong> - German Lizarraga</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="_ECheRkNyGI">
+            <a href="https://www.youtube.com/watch?v=_ECheRkNyGI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Minutos</strong> - Ricardo Arjona</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="bnS03AYIKp4">
+            <a href="https://www.youtube.com/watch?v=bnS03AYIKp4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Antes</strong> - Obie Bermudez</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="XsxX7PTlOMc">
+            <a href="https://www.youtube.com/watch?v=XsxX7PTlOMc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Papadio</strong> - Carlos Vives</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="FqYrfDFfjuM">
+            <a href="https://www.youtube.com/watch?v=FqYrfDFfjuM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Maldita Ignorancia</strong> - Jimena</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="cTzgLTpnTx0">
+            <a href="https://www.youtube.com/watch?v=cTzgLTpnTx0"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Estoy A Punto</strong> - Bronco</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="wsQWOPvMj8Q">
+            <a href="https://www.youtube.com/watch?v=wsQWOPvMj8Q"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Poco Hombre</strong> - Victor Manuelle</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="bAcINw8tp3g">
+            <a href="https://www.youtube.com/watch?v=bAcINw8tp3g"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Vive La Vida</strong> - Area 305</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="Fo7P8rGKj9w">
+            <a href="https://www.youtube.com/watch?v=Fo7P8rGKj9w"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Dejenme Si Estoy Llorando</strong> - Los Angeles De Charly</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="6rB7CU2lZ34">
+            <a href="https://www.youtube.com/watch?v=6rB7CU2lZ34"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Masucamba</strong> - Tego Calderon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="v9JDnr-QXrU">
+            <a href="https://www.youtube.com/watch?v=v9JDnr-QXrU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>El Deseo De Ti</strong> - Daniel Rene With Jennifer Pena</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="flr8vDQ9Wuc">
+            <a href="https://www.youtube.com/watch?v=flr8vDQ9Wuc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Fotografia</strong> - Juanes Duet With Nelly Furtado</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="BUw-QOopXUg">
+            <a href="https://www.youtube.com/watch?v=BUw-QOopXUg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Quitemonos La Ropa</strong> - Alexandre Pires</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="AxEV4nXx8iM">
+            <a href="https://www.youtube.com/watch?v=AxEV4nXx8iM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Te Regalo Mi Tristeza</strong> - Los Temerarios</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="qHT0w8k3Yw4">
+            <a href="https://www.youtube.com/watch?v=qHT0w8k3Yw4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Te Metiste En Mi Cama</strong> - Palomo</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="KYZlT2iYRh8">
+            <a href="https://www.youtube.com/watch?v=KYZlT2iYRh8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Un Siglo Sin Ti</strong> - Chayanne</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="83S-KtvGM2M">
+            <a href="https://www.youtube.com/watch?v=83S-KtvGM2M"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Rie Y Llora</strong> - Celia Cruz</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="kEZaCdwSjao">
+            <a href="https://www.youtube.com/watch?v=kEZaCdwSjao"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Me Pones Sexy</strong> - Thalia Featuring Fat Joe</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="aIwyf86u6Z0">
+            <a href="https://www.youtube.com/watch?v=aIwyf86u6Z0"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Desde Hoy</strong> - Duelo</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="flr8vDQ9Wuc">
+            <a href="https://www.youtube.com/watch?v=flr8vDQ9Wuc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Fotografia</strong> - Juanes With Nelly Furtado</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="5Jp2JOvFSUY">
+            <a href="https://www.youtube.com/watch?v=5Jp2JOvFSUY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Estoy A Punto</strong> - Bronco: El Gigante De America</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="jwRnbtzN-mQ">
+            <a href="https://www.youtube.com/watch?v=jwRnbtzN-mQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Supervisor De Tus Suenos</strong> - A.cinco</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="q_Tz0XmyeIY">
+            <a href="https://www.youtube.com/watch?v=q_Tz0XmyeIY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Ya No Eres El Mismo</strong> - Noelia</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="iOdMDyX_U6A">
+            <a href="https://www.youtube.com/watch?v=iOdMDyX_U6A"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Eso Duele</strong> - Intocable</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="owwJ6a0okmo">
+            <a href="https://www.youtube.com/watch?v=owwJ6a0okmo"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>El Rancho Grande</strong> - El Coyote Y Su Banda Tierra Santa</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="oA10hWbQFOM">
+            <a href="https://www.youtube.com/watch?v=oA10hWbQFOM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>En Los Puritos Huesos</strong> - Banda El Limon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="xNgTMDRoa60">
+            <a href="https://www.youtube.com/watch?v=xNgTMDRoa60"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Es Lo Mismo</strong> - Alejandro Sanz</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="4mCOH9SAUS0">
+            <a href="https://www.youtube.com/watch?v=4mCOH9SAUS0"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Hoy</strong> - Gloria Estefan</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="W9z6V6fS4dI">
+            <a href="https://www.youtube.com/watch?v=W9z6V6fS4dI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Otra Vez</strong> - Victor Garcia</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="gysA2GD7jX0">
+            <a href="https://www.youtube.com/watch?v=gysA2GD7jX0"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>No Hace Falta</strong> - Cristian</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="gYX5uwmyNh8">
+            <a href="https://www.youtube.com/watch?v=gYX5uwmyNh8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Asignatura Pendiente</strong> - Ricky Martin</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="htoHUlR6m0M">
+            <a href="https://www.youtube.com/watch?v=htoHUlR6m0M"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Nomas Por Tu Culpa</strong> - Los Huracanes Del Norte</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="fl5X82JJ3-g">
+            <a href="https://www.youtube.com/watch?v=fl5X82JJ3-g"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Dejame Volar</strong> - Julio</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ymVzRXhoLtY">
+            <a href="https://www.youtube.com/watch?v=ymVzRXhoLtY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Primavera</strong> - Beto Y Sus Canarios</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="wSWvHX0_h6A">
+            <a href="https://www.youtube.com/watch?v=wSWvHX0_h6A"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Amor Besame</strong> - Adolfo Urias Y Su Lobo Norteno</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="UdT92b1dyNk">
+            <a href="https://www.youtube.com/watch?v=UdT92b1dyNk"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Aunque Te Rompan El Alma</strong> - Cardenales De Nuevo Leon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="_v_-hkOkJ3o">
+            <a href="https://www.youtube.com/watch?v=_v_-hkOkJ3o"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Ave Cautiva</strong> - Conjunto Primavera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="Wlpa9dXtSpQ">
+            <a href="https://www.youtube.com/watch?v=Wlpa9dXtSpQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Me Canse De Morir Por Tu Amor</strong> - Adan Chalino Sanchez</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="oYkznpneFsA">
+            <a href="https://www.youtube.com/watch?v=oYkznpneFsA"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Para Morir Iguales</strong> - Nico Flores Y Su Banda Puro Mazatlan</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="2NdT9jiRT7Y">
+            <a href="https://www.youtube.com/watch?v=2NdT9jiRT7Y"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Ya No Te Vayas</strong> - Banda El Limon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="da4wIOLTdCo">
+            <a href="https://www.youtube.com/watch?v=da4wIOLTdCo"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Te Reto A Que Me Olvides</strong> - Julio Preciado Y Su Banda Perla Del Pacifico</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="J0qbS8HeAIQ">
+            <a href="https://www.youtube.com/watch?v=J0qbS8HeAIQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Te Necesito</strong> - Luis Miguel</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="_hLv-cr77ng">
+            <a href="https://www.youtube.com/watch?v=_hLv-cr77ng"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Solo Por Ti</strong> - Soraya</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="gm-lIFmq-kI">
+            <a href="https://www.youtube.com/watch?v=gm-lIFmq-kI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Yo La Amo</strong> - Pepe Aguilar</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="fanA-yh6AJI">
+            <a href="https://www.youtube.com/watch?v=fanA-yh6AJI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Un Amor Para La Historia</strong> - Gilberto Santa Rosa</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="O8lJzby6a6U">
+            <a href="https://www.youtube.com/watch?v=O8lJzby6a6U"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Causame La Muerte</strong> - Los Tigres Del Norte</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="F3IYQszHdv0">
+            <a href="https://www.youtube.com/watch?v=F3IYQszHdv0"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Quiero Perderme En Tu Cuerpo</strong> - David Bisbal</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="RB5zC1YKQSY">
+            <a href="https://www.youtube.com/watch?v=RB5zC1YKQSY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Sin Poderte Hablar</strong> - Huey Dunbar</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="Zwj-B_3WEMw">
+            <a href="https://www.youtube.com/watch?v=Zwj-B_3WEMw"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>En Realidad</strong> - Jorge Luis Cabrera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="tg7QRlINFgQ">
+            <a href="https://www.youtube.com/watch?v=tg7QRlINFgQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mientes Tan Bien</strong> - Sin Bandera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="kzWIOwy3zfo">
+            <a href="https://www.youtube.com/watch?v=kzWIOwy3zfo"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Carmelina</strong> - Jorge Correa</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="6QSXbvmEEJM">
+            <a href="https://www.youtube.com/watch?v=6QSXbvmEEJM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>La Paga</strong> - Juanes</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="rMFH76ZtlBs">
+            <a href="https://www.youtube.com/watch?v=rMFH76ZtlBs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mas Que Tu Amigo</strong> - Marco Antonio Solis</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="h8ksGCSoFQk">
+            <a href="https://www.youtube.com/watch?v=h8ksGCSoFQk"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Intentalo Tu</strong> - Joe Veras</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="M1R0Qe-DMYs">
+            <a href="https://www.youtube.com/watch?v=M1R0Qe-DMYs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Que Te Ruegue Quien Te Quiera</strong> - Banda El Recodo</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="1SBzlEQyFgE">
+            <a href="https://www.youtube.com/watch?v=1SBzlEQyFgE"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Quien Te Dijo Eso</strong> - Luis Fonsi</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="wit3kfPhXqE">
+            <a href="https://www.youtube.com/watch?v=wit3kfPhXqE"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Cuando Tu No Estas</strong> - Olga Tanon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="P8bZbQXaEsM">
+            <a href="https://www.youtube.com/watch?v=P8bZbQXaEsM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Lagrimas De Cristal</strong> - Grupo Montez De Durango</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="dH7bTCsNlNo">
+            <a href="https://www.youtube.com/watch?v=dH7bTCsNlNo"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Libertad</strong> - Jerry Rivera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ZFrgDv3ONnQ">
+            <a href="https://www.youtube.com/watch?v=ZFrgDv3ONnQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Ay Amor</strong> - Hector y Tito Featuring Victor Manuelle</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="25abyFODGvc">
+            <a href="https://www.youtube.com/watch?v=25abyFODGvc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Inocente De Ti</strong> - Juan Gabriel</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="UMReJnwr25w">
+            <a href="https://www.youtube.com/watch?v=UMReJnwr25w"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Cucu</strong> - La Onda With Control</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="zpM144k_JZs">
+            <a href="https://www.youtube.com/watch?v=zpM144k_JZs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Te Llevare Al Cielo</strong> - Mana</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="zC8jjfmdAZU">
+            <a href="https://www.youtube.com/watch?v=zC8jjfmdAZU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Ya No Me Duele</strong> - Victoria</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="p7Fz6aj6Uaw">
+            <a href="https://www.youtube.com/watch?v=p7Fz6aj6Uaw"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Amor Amor</strong> - Roselyn Sanchez Featuring Tego Calderon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="2WjYABMyVAI">
+            <a href="https://www.youtube.com/watch?v=2WjYABMyVAI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Sentimental</strong> - Joan Sebastian</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="bRN1Od7Estw">
+            <a href="https://www.youtube.com/watch?v=bRN1Od7Estw"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>En Los Puritos Huesos</strong> - La Arrolladora Banda El Limon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ZsAUOjgwJXs">
+            <a href="https://www.youtube.com/watch?v=ZsAUOjgwJXs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Amor De Los Dos</strong> - Vicente Fernandez With Alejandro Fernandez</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="OujPEr3Oblk">
+            <a href="https://www.youtube.com/watch?v=OujPEr3Oblk"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Gente</strong> - A.b. Quintanilla Iii y Kumbia Kings Feat. Ozomatli</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="0sb7SCINkPU">
+            <a href="https://www.youtube.com/watch?v=0sb7SCINkPU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Si No Me Amas</strong> - Ednita Nazario</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="95KzajISJXc">
+            <a href="https://www.youtube.com/watch?v=95KzajISJXc"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mirame, Mirate</strong> - Natalia Lafourcade</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="GztG4S9i7dA">
+            <a href="https://www.youtube.com/watch?v=GztG4S9i7dA"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Titere En Tus Manos</strong> - Ramon Ayala Y Sus Bravos Del Norte</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="KjtIZdffFv4">
+            <a href="https://www.youtube.com/watch?v=KjtIZdffFv4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Me Quiero Casar</strong> - Control</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="1SBzlEQyFgE">
+            <a href="https://www.youtube.com/watch?v=1SBzlEQyFgE"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Quien Te Dijo Eso?</strong> - Luis Fonsi</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="sGtnPLTHUy0">
+            <a href="https://www.youtube.com/watch?v=sGtnPLTHUy0"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>En El Silencio Negro De La Noche</strong> - Alexandre Pires</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="nKOUWCLZ0e8">
+            <a href="https://www.youtube.com/watch?v=nKOUWCLZ0e8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Adicto</strong> - Enrique Iglesias</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="ER9uHy2P6to">
+            <a href="https://www.youtube.com/watch?v=ER9uHy2P6to"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Me Canse De Ti</strong> - Obie Bermudez</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="LrEp2ken658">
+            <a href="https://www.youtube.com/watch?v=LrEp2ken658"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Paso A La Reina</strong> - Cardenales De Nuevo Leon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="DDZTj6Rp9j8">
+            <a href="https://www.youtube.com/watch?v=DDZTj6Rp9j8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Aqui En Cortito</strong> - Los Rieleros Del Norte</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="FEkVpL_6yKo">
+            <a href="https://www.youtube.com/watch?v=FEkVpL_6yKo"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Cuidarte El Alma</strong> - Chayanne</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="STaWeOU6QMQ">
+            <a href="https://www.youtube.com/watch?v=STaWeOU6QMQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Me Voy A Ir</strong> - El Coyote Y Su Banda Tierra Santa</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="MzsdOVot1vI">
+            <a href="https://www.youtube.com/watch?v=MzsdOVot1vI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Te Llame</strong> - Cristian</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="rV7EtZ7xHc4">
+            <a href="https://www.youtube.com/watch?v=rV7EtZ7xHc4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>A Fuego Lento</strong> - Jennifer Pena</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="9gdY8d-HeZY">
+            <a href="https://www.youtube.com/watch?v=9gdY8d-HeZY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Vuelve</strong> - Rocio Sandoval</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="D-EKIUFm8uk">
+            <a href="https://www.youtube.com/watch?v=D-EKIUFm8uk"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Soy Un Novato</strong> - Intocable</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="MgX4QSHzY5w">
+            <a href="https://www.youtube.com/watch?v=MgX4QSHzY5w"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Loca Conmigo</strong> - Los Toros Band</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="jlOlQMwNcTg">
+            <a href="https://www.youtube.com/watch?v=jlOlQMwNcTg"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>A Pierna Suelta</strong> - Pepe Aguilar</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="V_ksyVZQQh4">
+            <a href="https://www.youtube.com/watch?v=V_ksyVZQQh4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Porque Me Haces Llorar</strong> - Briseyda</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="M7uXXeV75UI">
+            <a href="https://www.youtube.com/watch?v=M7uXXeV75UI"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Enamorada</strong> - Noelia</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="6_c048exl2Q">
+            <a href="https://www.youtube.com/watch?v=6_c048exl2Q"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Corazon De Papel</strong> - Julio Iglesias</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="Wb2SY0OpNMU">
+            <a href="https://www.youtube.com/watch?v=Wb2SY0OpNMU"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Dame Por Muerto</strong> - Lupillo Rivera</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="f3966l3zmf4">
+            <a href="https://www.youtube.com/watch?v=f3966l3zmf4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Regalame La Silla Donde Te Espere</strong> - Alejandro Sanz</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="OLL9iiZ68-s">
+            <a href="https://www.youtube.com/watch?v=OLL9iiZ68-s"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Dalo Por Hecho</strong> - Bronco: El Gigante De America</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="fr_UrI8l4-M">
+            <a href="https://www.youtube.com/watch?v=fr_UrI8l4-M"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Amor Descarado</strong> - Los Tucanes De Tijuana</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="B2Xdl6H1qF0">
+            <a href="https://www.youtube.com/watch?v=B2Xdl6H1qF0"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>El Ano Viejo</strong> - Celia Cruz</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="z9Z9iU2p2Qk">
+            <a href="https://www.youtube.com/watch?v=z9Z9iU2p2Qk"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mas Terco Que Una Mula</strong> - German Lizarraga</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="2dWAmcjZZdM">
+            <a href="https://www.youtube.com/watch?v=2dWAmcjZZdM"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Y Todo Queda En Nada</strong> - Ricky Martin</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="UFOUJW5LdD4">
+            <a href="https://www.youtube.com/watch?v=UFOUJW5LdD4"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Quitemonos La Ropa</strong> - Ng2</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="KcNp_874LtY">
+            <a href="https://www.youtube.com/watch?v=KcNp_874LtY"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Funeral</strong> - Victor Garcia</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="w_GPQp8oZjQ">
+            <a href="https://www.youtube.com/watch?v=w_GPQp8oZjQ"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Amigo Mio</strong> - Tono Rosario With Tego Calderon</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="1n7o0kFYKYs">
+            <a href="https://www.youtube.com/watch?v=1n7o0kFYKYs"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>A Donde Ire</strong> - Huey Dunbar</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="9jrkdJYZv2U">
+            <a href="https://www.youtube.com/watch?v=9jrkdJYZv2U"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Un Te Amo</strong> - Luis Miguel</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="DiqBqkNuGJ8">
+            <a href="https://www.youtube.com/watch?v=DiqBqkNuGJ8"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Mi Gente</strong> - A.b. Quintanilla Iii y Kumbia Kings Feat. Ozomatli</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="Ep482vCrGWE">
+            <a href="https://www.youtube.com/watch?v=Ep482vCrGWE"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Cerca De Ti</strong> - Thalia</span>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video" onclick="loadVid($(this));" data-id="OujPEr3Oblk">
+            <a href="https://www.youtube.com/watch?v=OujPEr3Oblk"></a>
+        </div>
+        <div class="video-text-container">
+            <span class="video-text"><strong>Donde Corre La Sangre</strong> - Shalim</span>
+        </div>
+    </div>
+
+
+
+    </section>
+
+
+
+
+    <div class= "dropdownContainer">
+        <div class="dropdownSelect">
+            <div id="playlistContainer"><a href="#" target="_blank" id="playlistLink"><em>Open year as a playlist</em></a></div>
+            <form id="choice">
+            <label>
+                <span class="selectSpan">
+                <select class="select_change_page" onchange="change_url(this.value);">
+                    <option>Año/Year</option>
+                    <option value="2014.html">2014</option>
+                    <option value="2013.html">2013</option>
+                    <option value="2012.html">2012</option>
+                    <option value="2011.html">2011</option>
+                    <option value="2010.html">2010</option>
+                    <option value="2009.html">2009</option>
+                    <option value="2008.html">2008</option>
+                    <option value="2007.html">2007</option>
+                    <option value="2006.html">2006</option>
+                    <option value="2005.html">2005</option>
+                    <option value="2004.html">2004</option>
+                    <option value="2003.html">2003</option>
+                    <option value="2002.html">2002</option>
+                    <option value="2001.html">2001</option>
+                    <option value="2000.html">2000</option>
+                    <option value="1999.html">1999</option>
+                    <option value="1998.html">1998</option>
+                    <option value="1997.html">1997</option>
+                    <option value="1996.html">1996</option>
+                    <option value="1995.html">1995</option>
+                    <option value="1994.html">1994</option>
+                    <option value="1993.html">1993</option>
+                    <option value="1992.html">1992</option>
+                    <option value="1991.html">1991</option>
+                    <option value="1990.html">1990</option>
+                    <option value="1989.html">1989</option>
+                    <option value="1988.html">1988</option>
+                    <option value="1987.html">1987</option>
+                    <option value="1986.html">1986</option>
+                    <option value="1985.html">1985</option>
+                    <option value="1984.html">1984</option>
+                    <option value="1983.html">1983</option>
+                    <option value="1982.html">1982</option>
+                    <option value="1981.html">1981</option>
+                    <option value="1980.html">1980</option>
+                </select>
+                </span>
+            </label>
+            </form>
+        </div>
+    </div>
+
+
+
+<footer> 
+    
 
 
 
@@ -24,20 +2031,26 @@
 
 
 
+</footer>
 
+
+    <script type="text/javascript">
+        function change_url(val) {
+            if (val == "Año/Year") {
+                return false;
+            }
+            window.location = val;
+        }
+
+    </script>
+
+
+    <script src="../js/embedvideo.js" type="text/javascript"></script>
+
+    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 
 </body>
-
-
-
-
-
-
-
-
-
-
 
 
 </html>
