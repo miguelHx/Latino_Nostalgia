@@ -11,7 +11,7 @@ $(window).on('load', function() {
 
 function loadVid(element) {
     element.embedly({
-        key: 'c819eb35dd4f4b52b609427c1c509c4a',
+        key: 'f31b66cde9364207b35e8cd4d54bc24a',
         query: {maxwidth:530}
     });
 
