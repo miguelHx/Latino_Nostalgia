@@ -63,6 +63,9 @@ body {
     margin-top: 10px !important;
     margin-bottom: 25px;
 }
+#yearSelect {
+    font-size: 35px;
+}
 .selectDiv label {
     position: relative;
     margin-left: 10px;
@@ -89,6 +92,9 @@ select {
     width: 210px;
     font-size: 50px;
     height: 60px;
+}
+.select_change_page {
+    font-size: 38px;
 }
 .selectDiv p {
     color: white;
