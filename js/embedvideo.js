@@ -5,7 +5,7 @@ $(window).on('load', function() {
         var videoId = this.getAttribute('data-id');
 
         //Based on the youtube ID, find thumbnail image
-        $(this).css('background-image', 'url(http://img.youtube.com/vi/' + videoId + '/hqdefault.JPG)');
+        $(this).css('background-image', 'url("http://img.youtube.com/vi/' + videoId + '/hqdefault.jpg")');
     });
 });
 
