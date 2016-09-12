@@ -169,6 +169,7 @@ section {
     width: 500px;
     background-repeat: no-repeat;
     background-size: 500px 300px;
+    cursor: pointer;
 }
 .video-text-container {
     height: 85px;
