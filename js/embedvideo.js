@@ -1,4 +1,4 @@
-$(window).on('load', function() {
+window.onload = function() {
 
     $('.video').each(function() {
 
