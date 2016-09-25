@@ -15,6 +15,10 @@ function loadVid(element) {
         query: {maxwidth:530}
     });
 
-    element.addClass('spinner');
+    element.addClass('preloader');
+    element.children.addClass('cube one');
+    element.children.addClass('cube two');
+    element.children.addClass('cube three');
+    element.children.addClass('cube four');
     element.children.addClass('hidden');
 }
