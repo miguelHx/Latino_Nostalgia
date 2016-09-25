@@ -164,20 +164,16 @@ section {
     cursor: pointer;
 }
 .preloader{
-  .body {
-    background-color: red;
-  }
   height: 300px;
   width: 500px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  
     .cube {
         width: 20px;
         height: 20px;
-        margin-right: 5px;
+            margin-right: 5px;
     }
   .one{background-color: #8CC271;}
   .two{background-color: #69BEEB;}
