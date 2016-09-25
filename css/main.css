@@ -172,7 +172,7 @@ section {
     animation: barberpole 0.5s linear infinite;
 
 
-    background-size: 300px 500px;
+    background-size: 30px 30px;
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
 }
 .video-text-container {
