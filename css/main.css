@@ -163,7 +163,7 @@ section {
     background-size: 500px 300px;
     cursor: pointer;
 }
-.loading{
+.loading {
     height: 300px;
     width: 500px;
     -webkit-animation: barberpole 0.5s linear infinite;
@@ -175,6 +175,46 @@ section {
     background-size: 30px 30px;
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
 }
+@-webkit-keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+@-moz-keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+@-o-keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+@keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
 .video-text-container {
     height: 85px;
     max-height: 100px;

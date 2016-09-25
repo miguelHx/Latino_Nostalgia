@@ -16,5 +16,4 @@ function loadVid(element) {
     });
 
     element.addClass('loading');
-    element.children.addClass('hidden');
 }
