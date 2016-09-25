@@ -172,6 +172,7 @@ section {
   border-radius: 50%;
   box-shadow: 0 -20px 0 24px #27ae60 inset;
   animation: rotate 1s infinite linear;
+  animation-iteration-count: 1;
 }
 
 @keyframes rotate {

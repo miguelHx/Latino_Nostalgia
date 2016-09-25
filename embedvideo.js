@@ -15,6 +15,6 @@ function loadVid(element) {
         query: {maxwidth:530}
     });
 
-    element.addClass('loader');
+    element.addClass('spinner');
     element.children.addClass('hidden');
 }
