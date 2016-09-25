@@ -164,6 +164,8 @@ section {
     cursor: pointer;
 }
 .loading{
+    height: 300px;
+    width: 500px;
     -webkit-animation: barberpole 0.5s linear infinite;
     -moz-animation: barberpole 0.5s linear infinite;
     -o-animation: barberpole 0.5s linear infinite;
