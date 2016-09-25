@@ -170,12 +170,8 @@ section {
     animation: barberpole 0.5s linear infinite;
 
 
-    background-size: 100px 100px;
-    background-image: -webkit-linear-gradient(left, #48d0cc, #ffa711); /* For Chrome and Safari */
-    background-image: -moz-linear-gradient(left, #48d0cc, #ffa711); /* For old Fx (3.6 to 15) */
-    background-image: -ms-linear-gradient(left, #48d0cc, #ffa711); /* For pre-releases of IE 10*/
-    background-image: -o-linear-gradient(left, #48d0cc, #ffa711); /* For old Opera (11.1 to 12.0) */
-    background-image: linear-gradient(to right, #48d0cc, #ffa711); /* Standard syntax; must be last */
+    background-size: 30px 30px;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
 }
 .video-text-container {
     height: 85px;
