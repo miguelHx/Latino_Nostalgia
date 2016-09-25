@@ -14,6 +14,9 @@ body {
     background-image: linear-gradient(to right, #48d0cc, #ffa711); /* Standard syntax; must be last */
     overflow-x: hidden !important;
 }
+.hidden {
+    display: none;
+}
 #header div {
     text-align: center;
 }
@@ -42,7 +45,6 @@ body {
     height: 500px;
     width: 450px;
     margin: 0 auto;
-
 }
 #playlistContainer {
     width: 150px;
@@ -160,6 +162,20 @@ section {
     background-repeat: no-repeat;
     background-size: 500px 300px;
     cursor: pointer;
+}
+.loading{
+    -webkit-animation: barberpole 0.5s linear infinite;
+    -moz-animation: barberpole 0.5s linear infinite;
+    -o-animation: barberpole 0.5s linear infinite;
+    animation: barberpole 0.5s linear infinite;
+
+
+    background-size: 30px 30px;
+    background-image: -webkit-linear-gradient(left, #48d0cc, #ffa711); /* For Chrome and Safari */
+    background-image: -moz-linear-gradient(left, #48d0cc, #ffa711); /* For old Fx (3.6 to 15) */
+    background-image: -ms-linear-gradient(left, #48d0cc, #ffa711); /* For pre-releases of IE 10*/
+    background-image: -o-linear-gradient(left, #48d0cc, #ffa711); /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(to right, #48d0cc, #ffa711); /* Standard syntax; must be last */
 }
 .video-text-container {
     height: 85px;

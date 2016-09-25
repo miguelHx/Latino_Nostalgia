@@ -15,5 +15,6 @@ function loadVid(element) {
         query: {maxwidth:530}
     });
 
+    element.addClass('loading');
     element.children('div').addClass('hidden');
 }
