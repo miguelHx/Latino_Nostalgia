@@ -163,22 +163,55 @@ section {
     background-size: 500px 300px;
     cursor: pointer;
 }
-.preloader{
-  height: 300px;
-  width: 500px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    .cube {
-        width: 20px;
-        height: 20px;
-            margin-right: 5px;
-    }
-  .one{background-color: #8CC271;}
-  .two{background-color: #69BEEB;}
-  .three{background-color: #F5AA39;}
-  .four{background-color: #E9643B;}
+.loading {
+    -webkit-animation: barberpole 0.5s linear infinite;
+    -moz-animation: barberpole 0.5s linear infinite;
+    -o-animation: barberpole 0.5s linear infinite;
+    animation: barberpole 0.5s linear infinite;
+
+
+    background-size: 30px 30px;
+    background-image: linear-gradient(to right, #48d0cc, #ffa711); /* Standard syntax; must be last */
+}
+
+@-webkit-keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+@-moz-keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+@-o-keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+@keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
 }
 .video-text-container {
     height: 85px;

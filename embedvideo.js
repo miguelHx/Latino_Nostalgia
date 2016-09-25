@@ -15,13 +15,7 @@ function loadVid(element) {
         query: {maxwidth:530}
     });
 
-    element.addClass('preloader');
-    tl= new TimelineMax({repeat:-1}); //repeat:-1
+    element.addClass('loading');
 
-    tl
-        .to(cube1,0.2,{x:-30, ease:Power1.easeIn})
-        .to(cube1,0.2,{x:0, ease:Power1.easeOut})
-        .to(cube4,0.2,{x:30, ease:Power1.easeOut})
-        .to(cube4,0.2,{x:0, ease:Power1.easeIn})
-    element.children.addClass('hidden');
+
 }
