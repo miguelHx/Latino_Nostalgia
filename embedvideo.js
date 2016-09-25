@@ -16,9 +16,5 @@ function loadVid(element) {
     });
 
     element.addClass('preloader');
-    element.children.addClass('cube one');
-    element.children.addClass('cube two');
-    element.children.addClass('cube three');
-    element.children.addClass('cube four');
     element.children.addClass('hidden');
 }
