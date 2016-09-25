@@ -164,7 +164,9 @@ section {
     cursor: pointer;
 }
 .preloader{
-  background-color: red;
+  .body {
+    background-color: red;
+  }
   height: 300px;
   width: 500px;
   margin: 0 auto;
