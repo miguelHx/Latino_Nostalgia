@@ -62,7 +62,8 @@ public class URLFinder {
         System.out.println("size = " + s2.size());
         System.out.println("Dots: " + findDOTs(s2));
     }
-    
+
+    // ignore below, I was just testing a calendar iterator
     public static void main(String args[]) throws ParseException {
     	//testURLWithStorage();
     	/*
@@ -91,50 +92,6 @@ public class URLFinder {
     }
     
 }
-
-
-/*
- * Q: Need help in modifying while loop that utilizes Calendar (Java)
- * 
- * The code below does what I want except for the very last output.
-
-    Calendar cal = Calendar.getInstance();
-    	cal.clear();
-    	cal.set(2005,  1, 22);
-    	int year = cal.get(Calendar.YEAR);
-    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-    	while (year >= cal.get(Calendar.YEAR)) {
-    		cal.add(Calendar.DAY_OF_MONTH, 7);
-    		System.out.println(sdf.format(cal.getTime()));
-    	}
-
-Here is the output:
-
-    1986-09-27
-    1986-10-04
-    1986-10-11
-    1986-10-18
-    1986-10-25
-    1986-11-01
-    1986-11-08
-    1986-11-15
-    1986-11-22
-    1986-11-29
-    1986-12-06
-    1986-12-13
-    1986-12-20
-    1986-12-27
-    1987-01-03
-
-I'm going to use this while loop to execute irreversible code and I want it to be when the year is NOT 1987.  However, the 1987 shows up here and I've tried modifying the while loop condition to get the last entry to be 
-
-1986-12-27
-
-but to no avail and I got an infinite loop on one of my attempts that made my computer really slow, so I'm pretty stuck.
-
-The desired output is the same as the output above except without the 1987 date.
-
- */
 
 
 
