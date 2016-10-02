@@ -148,13 +148,12 @@ section {
     padding-left: 15px;
 }
 .video-container {
-    width: 500px;
+    width: 490px;
     height: 400px;
     float: left;
     margin: 12px;
     background-position: 0px -50px;
     background-repeat: none;
-    background-color: white;
 }
 .video {
     height: 300px;
@@ -213,6 +212,12 @@ section {
     background-position: 60px 30px;
   }
 }
+.embed {
+    width: 500px;
+    height: 300px;
+    float: left;
+    margin: 0px;
+}
 .video-text-container {
     height: 85px;
     max-height: 100px;
@@ -233,8 +238,8 @@ section {
     font-size: 20px;
 }
 iframe {
-    width: 500px;
-    height: 300px;
+    width: 500px !important;
+    height: 300px !important;
     /*float: left;*/
 }
 @media all and (max-width: 1710px;) {

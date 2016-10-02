@@ -15,7 +15,9 @@ function loadVid(element) {
         query: {maxwidth:530}
     });
 
-    element.addClass('loading');
+    var parentDiv = element.parent();
+    //parentDiv.addClass('loading');
 
+    element.addClass('loading');
 
 }
