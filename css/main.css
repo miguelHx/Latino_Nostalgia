@@ -212,12 +212,6 @@ section {
     background-position: 60px 30px;
   }
 }
-.embed {
-    width: 500px;
-    height: 300px;
-    float: left;
-    margin: 0px;
-}
 .video-text-container {
     height: 85px;
     max-height: 100px;
