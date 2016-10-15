@@ -155,6 +155,11 @@ section {
     background-position: 0px -50px;
     background-repeat: none;
 }
+
+iframe {
+    height: 300px;
+    width: 500px;
+}
 .video {
     height: 300px;
     width: 500px;
