@@ -16,8 +16,8 @@ function loadVid(element) {
     });
 
     var parentDiv = element.parent();
-    //parentDiv.addClass('loading');
+    parentDiv.addClass('loading');
 
-    element.addClass('loading');
+    //element.addClass('loading');
 
 }

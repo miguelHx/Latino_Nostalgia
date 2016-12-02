@@ -147,6 +147,56 @@ section {
     overflow: hidden;
     padding-left: 15px;
 }
+.loading {
+    -webkit-animation: barberpole 0.5s linear infinite;
+    -moz-animation: barberpole 0.5s linear infinite;
+    -o-animation: barberpole 0.5s linear infinite;
+    animation: barberpole 0.5s linear infinite;
+
+
+    background-size: 30px 30px;
+   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
+}
+
+@-webkit-keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+@-moz-keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+@-o-keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+@keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 60px 30px;
+  }
+}
 .video-container {
     width: 500px;
     height: 400px;
@@ -218,7 +268,7 @@ iframe {
   }
 }
 .video-text-container {
-    height: 85px;
+    height: 100px;
     max-height: 100px;
     max-width: 500px;
     width: 500px;
@@ -231,6 +281,7 @@ iframe {
     border-bottom-right-radius: 10px;
     padding-left: 23px;
     padding-right: 23px;
+    background-color: white !important;
 }
 .video-text {
     margin: 0 auto;
