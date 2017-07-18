@@ -1,67 +1,13 @@
 body {
     background-color: #EEEEEE;
 }
-#header {
-    position: relative;
-    height: 180px;
-    width: 100%;
-    margin: 0;
+#header-home {
     padding-top: 10px;
-    /*background-image: url("../img/header.PNG");*/
-    background-image: -webkit-linear-gradient(left, #48d0cc, #ffa711); /* For Chrome and Safari */
-    background-image: -moz-linear-gradient(left, #48d0cc, #ffa711); /* For old Fx (3.6 to 15) */
-    background-image: -ms-linear-gradient(left, #48d0cc, #ffa711); /* For pre-releases of IE 10*/
-    background-image: -o-linear-gradient(left, #48d0cc, #ffa711); /* For old Opera (11.1 to 12.0) */
-    background-image: linear-gradient(to right, #48d0cc, #ffa711); /* Standard syntax; must be last */
-    overflow-x: hidden !important;
+    height: 180px;
+    background-color: #4CCFC8;
 }
 .hidden {
     display: none;
-}
-#header div {
-    text-align: center;
-}
-#headerContent div h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
-    color: #F6F9ED !important;
-}
-#headerContent div p {
-    color: white;
-    font-size: 15px;
-
-}
-
-#playlistContainer {
-    width: 150px;
-    margin: 0 auto;
-}
-
-#yearSelect {
-    font-size: 35px;
-}
-
-.select_change_page {
-    padding: 5px;
-    padding-right: 9px;
-    padding-left: 5px;
-    padding-bottom: 10px;
-    margin: 0;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    background: #FBA816;
-    color: black;
-    outline: none;
-    display: inline-block;
-    /*-webkit-appearance: none;*/
-    border: none;
-    cursor: pointer;
-    font-size: 40px;
-    display: block;
-    width: 210px;
-    font-size: 50px;
-    height: 60px;
 }
 
 h1 {
@@ -71,26 +17,7 @@ a:hover {
     color: black !important;
     text-decoration: none !important;
 }
-.dropdownContainer {
-    padding: none;
-    max-width: 1920px;
-    max-height: 200px;
-}
-#playlistLink {
-    font-size: 20px;
-    display: block;
-    margin-bottom: 20px;
-    color: grey;
-}
-.selectSpan {
-    display: block;
-}
-.dropdownSelect {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: block;
-    text-align: center;
-}
+
 section {
     width: 1600px;
     margin-left: auto;
@@ -280,25 +207,6 @@ iframe {
         height: 500px;
         width: 370px;
         margin: 0 auto;
-    }
-    #yearLabel {
-        font-size: 12px;
-    }
-    #yearSelect {
-        margin-top: 20px;
-        margin: 0 auto;
-        margin-left: 20px;
-        height: 60px;
-    }
-    #playlistLink {
-        display: none;
-    }
-    
-    #choice {
-        width: 350px;
-    }
-    .dropdownSelect {
-        width: 320px;
     }
     .video-container {
         width: 300px;
