@@ -1,10 +1,33 @@
 body {
     background-color: #EEEEEE;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
+
 #header-home {
-    padding-top: 10px;
-    height: 180px;
+    height: 160px;
     background-color: #4CCFC8;
+    width: 100%;
+    overflow: hidden;
+}
+
+#header-home-content {
+    display: inline-block;
+    color: white;
+    margin-left: 25px;
+    padding-top: 0px;
+}
+#header-home-title {
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+#embedly {
+    display: inline-block;
+    float: right;
+    margin-top: 55px;
 }
 .hidden {
     display: none;
