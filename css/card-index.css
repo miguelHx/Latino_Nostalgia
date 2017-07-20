@@ -19,15 +19,16 @@
 }
 
 .card-selector {
-   width: 124.89px;
+   width: 125.89px;
    height: 58px;
    padding: 0;
    background: transparent;
-   border: 2px solid #666;
+   background-color: #31e2d9;
    margin: 0 auto;
    border-radius: 6px;
    -webkit-transition: all .5s ease;
    transition: all .5s ease;
+   font-size: 20px;
 }
 
 .card-selector select {
@@ -45,24 +46,21 @@
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  color: #666;
+  color: white;
   font: inherit;
   line-height: normal;
-  font-weight: normal;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
 .card-selector select option {
-  font-size: 25px;
-  background-color: #666;
+  font-size: 20px;
+  background-color: #00fff1;
   color: white;
 }
 
 .card-selector:hover {
-  background-color: #4CCFC8;
-  color: #fff;
-  border-color: #000;
+  background-color: #00fff1;
 }
 
 .card-selector select:hover {
@@ -78,10 +76,7 @@
   color: #777;
 }
 
-.no-button {
-  margin-top: 25px;
-  background-color: #fff;
-}
+
 
 
 

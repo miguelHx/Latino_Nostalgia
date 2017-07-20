@@ -21,7 +21,9 @@
   padding: 0;
   border: 0;
   background: transparent;
+  width: 128.88px;
   font: inherit;
+  font-weight: bold;
   line-height: normal;
   cursor: pointer;
   -moz-user-select: text;
@@ -30,8 +32,8 @@
   text-transform: uppercase;
   padding: 16px 36px 22px;
   background-color: #fff;
-  color: #666;
-  border: 2px solid #666;
+  color: #4CCFC8;
+  border: 2px solid #31e2d9;
   border-radius: 6px;
   margin-bottom: 16px;
   -webkit-transition: all .5s ease;
@@ -50,25 +52,25 @@
   display: block;
   height: 7px;
   width: 100%;
-  background-image: -webkit-repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
-  background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+  background-image: -webkit-repeating-linear-gradient(45deg, #31e2d9, #31e2d9 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(45deg, #31e2d9, #31e2d9 1px, transparent 2px, transparent 5px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-top: 1px solid #666;
+  border-top: 1px solid #31e2d9;
   position: absolute;
   left: 0;
   bottom: 0;
   background-size: 7px 7px;
 }
 .butn--stripe:hover {
-  background-color: #4CCFC8;
-  color: #fff;
-  border-color: #000;
+  background-color: #31e2d9;
+  color: white;
+  border-color: #31e2d9;
 }
 .butn--stripe:hover:after {
   background-image: -webkit-repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
   background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
-  border-top: 1px solid #000;
+  border-top: 1px solid white;
   -webkit-animation: stripe-slide 12s infinite linear forwards;
           animation: stripe-slide 12s infinite linear forwards;
 }
