@@ -17,6 +17,7 @@ body {
     color: white;
     margin-left: 25px;
     padding-top: 0px;
+    float: left;
 }
 #header-home-title {
     font-weight: bold;
@@ -27,7 +28,8 @@ body {
 #embedly {
     display: inline-block;
     float: right;
-    margin-top: 55px;
+    margin-top: 57px;
+    margin-right: 25px;
 }
 .hidden {
     display: none;
