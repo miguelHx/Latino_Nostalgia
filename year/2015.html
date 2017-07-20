@@ -12,24 +12,18 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/card-index.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <!-- jQuery -->
+    <!-- jQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
     <script src="http://cdn.embed.ly/jquery.embedly-3.1.2.min.js" type="text/javascript"></script>
 
 </head>
 
 <body>
-
-    <div id="header">
-        <div id="headerContent">
-            <div>
-                <a href="../index.html"><h1>Latino Nostalgia</h1></a>
-            </div>
+    <div id="header-reduced">
+        <div id="header-home-content">
+            <p id="header-home-title-reduced">Latino<br>Nostalgia</p>
         </div>
-
-        <div class= "card-selector no-button">
+        <div class= "selector">
             <select onchange="change_url(this.value);">
                 <option>2015</option>
                 <option value="2014.html">2014</option>
@@ -1034,13 +1028,7 @@
 
 
     <script type="text/javascript">
-        function change_url(val) {
-            if (val == "Año/Year") {
-                return false;
-            }
-            window.location = val;
-        }
-
+        function change_url(val) { window.location = val; }
     </script>
 
 

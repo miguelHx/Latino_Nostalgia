@@ -15,8 +15,8 @@
 }
 
 .card-step-1 {
-  font-family: 'Source Sans Pro', sans-serif;
-}
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;}
 
 .card-selector {
    width: 125.89px;

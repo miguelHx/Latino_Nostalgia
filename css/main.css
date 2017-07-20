@@ -7,7 +7,7 @@ body {
 
 #header-home {
     height: 160px;
-    background-color: #4CCFC8;
+    background-color: #31e2d9;
     width: 100%;
     overflow: hidden;
 }
@@ -23,6 +23,82 @@ body {
     font-weight: bold;
     font-size: 40px;
     margin-top: 30px;
+}
+#header-reduced {
+    height: 100px;
+    background-color: #31e2d9;
+    width: 100%;
+    overflow: hidden;
+}
+#header-home-title-reduced {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.selector {
+   width: 124.89px;
+   height: 58px;
+   padding: 0;
+   background: transparent;
+   border: 2px solid #666;
+   margin: 0 auto;
+   border-radius: 6px;
+   -webkit-transition: all .5s ease;
+   transition: all .5s ease;
+}
+
+.selector { /*year box selector*/
+   width: 100px;
+   height: 60px;
+   padding: 0;
+   background: transparent;
+   border: 3px solid white;
+   margin-left: 150px;
+   margin-top: 15px;
+   border-radius: 6px;
+   -webkit-transition: all .5s ease;
+   transition: all .5s ease;
+}
+
+/*select thingy itself*/
+.selector select {
+  overflow: visible;
+  text-transform: uppercase;
+  padding: 0px 10px; /*moves year inside selector*/
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  color: white;
+  font: inherit;
+  line-height: normal;
+  font-weight: bold;
+  font-size: 22px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  border-radius: 6px;
+}
+
+.selector select option {
+  font-size: 30px;
+  background-color: #4CCFC8;
+  color: white;
+}
+
+/*when hovering selector*/
+.selector:hover {
+  background-color: white;
+}
+
+/*changes text when hovering*/
+.selector select:hover {
+    color: #4CCFC8;
 }
 
 #embedly {
