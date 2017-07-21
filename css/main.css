@@ -118,6 +118,7 @@ section {
     position: static;
     overflow: hidden;
     padding-left: 15px;
+    padding-top: 180px;
 }
 .loading {
     -webkit-animation: barberpole 0.5s linear infinite;
@@ -241,8 +242,7 @@ iframe {
 .video-text-container {
     height: 100px;
     max-height: 100px;
-    max-width: 500px;
-    width: 500px;
+    width: 499px;
     display: flex;
 /*  flex-direction: column;*/
     align-items: center;
@@ -250,8 +250,6 @@ iframe {
     border: solid 1px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding-left: 23px;
-    padding-right: 23px;
     background-color: white !important;
 }
 .video-text {
@@ -335,27 +333,4 @@ iframe {
         /*float: left;*/
     }
 
-}
-footer {
-    display: block;
-    height: 200px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    /*background-image: url("../img/header.PNG");*/
-    background-image: -webkit-linear-gradient(left, #48d0cc, #ffa711); /* For Chrome and Safari */
-    background-image: -moz-linear-gradient(left, #48d0cc, #ffa711); /* For old Fx (3.6 to 15) */
-    background-image: -ms-linear-gradient(left, #48d0cc, #ffa711); /* For pre-releases of IE 10*/
-    background-image: -o-linear-gradient(left, #48d0cc, #ffa711); /* For old Opera (11.1 to 12.0) */
-    background-image: linear-gradient(to right, #48d0cc, #ffa711); /* Standard syntax; must be last */
-    overflow: hidden !important;   
-}
-
-.footerDiv {
-  display: inline-block;
-  height: 100%;
-  margin-top: 55px;
-  margin-left: 50px;
-  margin-right: 75px;
-  font-size: 10px;
 }
