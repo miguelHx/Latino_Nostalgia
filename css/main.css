@@ -16,7 +16,6 @@ body {
     display: inline-block;
     color: white;
     margin-left: 25px;
-    padding-top: 0px;
     float: left;
 }
 #header-home-title {
@@ -29,32 +28,24 @@ body {
     background-color: #31e2d9;
     width: 100%;
     overflow: hidden;
+    position: fixed;
 }
 #header-home-title-reduced {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
+    margin-top: 20px;
 }
 
-.selector {
-   width: 124.89px;
-   height: 58px;
-   padding: 0;
-   background: transparent;
-   border: 2px solid #666;
-   margin: 0 auto;
-   border-radius: 6px;
-   -webkit-transition: all .5s ease;
-   transition: all .5s ease;
-}
+
 
 .selector { /*year box selector*/
-   width: 100px;
-   height: 60px;
+   width: 65px;
+   height: 50px;
    padding: 0;
    background: transparent;
    border: 3px solid white;
    margin-left: 150px;
-   margin-top: 15px;
+   margin-top: 20px;
    border-radius: 6px;
    -webkit-transition: all .5s ease;
    transition: all .5s ease;
@@ -64,7 +55,7 @@ body {
 .selector select {
   overflow: visible;
   text-transform: uppercase;
-  padding: 0px 10px; /*moves year inside selector*/
+  padding: 0px 5px; /*moves year inside selector*/
   width: 100%;
   height: 100%;
   border: none;
