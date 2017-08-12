@@ -6,7 +6,8 @@ $(window).on('load', function() {
 
         //Based on the youtube ID, find thumbnail image
         $(this).css('background-image', 'url(http://img.youtube.com/vi/' + videoId + '/hqdefault.jpg)');
-        $(this).css('border-radius', "6px");
+
+        $(this).css('border-radius', "6px 6px 0 0");
     });
 });
 
