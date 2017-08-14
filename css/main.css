@@ -247,7 +247,6 @@ iframe {
 /*  flex-direction: column;*/
     align-items: center;
 /*  justify-content: cener;*/
-    border: solid 1px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: white !important;
