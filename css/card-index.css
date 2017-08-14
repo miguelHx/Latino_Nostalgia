@@ -76,7 +76,13 @@
   color: #777;
 }
 
+/* Smartphones (portrait and landscape) */
+@media only screen and (max-width : 510px) {
+    .card {
+      width: 290px;
+    }
 
+}
 
 
 
