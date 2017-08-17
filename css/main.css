@@ -114,11 +114,12 @@ section {
     width: 1600px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 70px;
     display: block;
     position: static;
     overflow: hidden;
     padding-left: 15px;
-    padding-top: 180px;
+    padding-top: 150px;
 }
 .loading {
     -webkit-animation: barberpole 0.5s linear infinite;
@@ -171,11 +172,13 @@ section {
 }
 .video-container {
     width: 500px;
-    height: 400px;
+    height: 390px;
     float: left;
     margin: 12px;
+    margin-bottom: 50px;
     background-position: 0px -50px;
     background-repeat: none;
+    border-radius: 6px;
 }
 
 iframe {
