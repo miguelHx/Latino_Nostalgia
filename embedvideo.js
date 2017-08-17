@@ -17,9 +17,10 @@ function loadVid(element) {
         query: {maxwidth:530}
     });
 
-    //var parentDiv = element.parent();
-    //parentDiv.addClass('loading'); causes funky things to happen.
+    var parentDiv = element.parent();
+    //console.log(parentDiv);
+    parentDiv.addClass('loading');
 
-    element.addClass('loading');
 
+    element.css('background', "");
 }
