@@ -1,0 +1,18 @@
+#home {
+  height: 160px;
+  background-color: #31e2d9;
+  width: 100%;
+  overflow: hidden;
+}
+
+#header-home-content {
+  display: inline-block;
+  color: white;
+  margin-left: 25px;
+}
+
+#header-home-title {
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 30px;
+}
