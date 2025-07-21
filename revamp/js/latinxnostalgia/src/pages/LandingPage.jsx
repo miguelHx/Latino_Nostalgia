@@ -1,5 +1,5 @@
-
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import Header from '../components/Header';
 
 import './LandingPage.css';
@@ -8,6 +8,7 @@ const DEFAULT_YEAR = '2015';
 
 function LandingPage() {
     const [year, setYear] = useState(DEFAULT_YEAR);
+    let navigate = useNavigate();
     return (
         <>
             <Header />
@@ -59,7 +60,13 @@ function LandingPage() {
                         <h3>Step 2: Listen</h3>
                     </div>
 
-                    <button id="letsgo" className="butn butn--stripe">Vamos</button>
+                    <button
+                        id="letsgo"
+                        className="butn butn--stripe"
+                        onClick={e => navigate(`/year/${year}`)}
+                    >
+                        Vamos
+                    </button>
                 </div>
             </div>
         </>

@@ -1,4 +1,4 @@
-import { useParams } from 'react-router'
+import { useParams, useNavigate } from 'react-router'
 import './YearPage.css';
 
 const START_YEAR = 1985;
@@ -10,7 +10,7 @@ function renderYearOptions(year) {
      * from remainder of list
      */
     const output = [];
-    output.push(<option>{year}</option>);
+    output.push(<option key={year}>{year}</option>);
     for (let yr = START_YEAR; yr <= END_YEAR; yr++) {
         if (yr == year) {
             continue
@@ -22,16 +22,20 @@ function renderYearOptions(year) {
 
 function YearPage() {
     const { year } = useParams();
+    let navigate = useNavigate();
     return (
         <>
             <header id="reduced">
                 <div id="header-home-content">
-                    <p id="header-home-title-reduced">
+                    <p
+                        id="header-home-title-reduced"
+                        onClick={e => navigate('/')}
+                    >
                         Latino<br/>Nostalgia
                     </p>
                 </div>
                 <div className="selector">
-                    <select>
+                    <select onChange={e => navigate(`/year/${e.target.value}`)}>
                         {renderYearOptions(year)}
                     </select>
                 </div>

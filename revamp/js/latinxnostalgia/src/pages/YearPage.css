@@ -11,6 +11,7 @@
     font-weight: bold;
     font-size: 25px;
     margin-top: 20px;
+    cursor: pointer;
 }
 /* selector from year page */
 .selector {
