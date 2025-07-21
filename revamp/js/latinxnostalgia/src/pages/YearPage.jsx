@@ -1,3 +1,6 @@
+import { useParams } from 'react-router'
+import './YearPage.css';
+
 const START_YEAR = 1985;
 const END_YEAR = 2015;
 
@@ -12,13 +15,13 @@ function renderYearOptions(year) {
         if (yr == year) {
             continue
         }
-        output.push(<option value={yr}>{yr}</option>);
+        output.push(<option key={yr} value={yr}>{yr}</option>);
     }
     return output;
 }
 
-function YearPage(props) {
-    const { year } = props;
+function YearPage() {
+    const { year } = useParams();
     return (
         <>
             <header id="reduced">
@@ -36,3 +39,4 @@ function YearPage(props) {
         </>
     )
 }
+export default YearPage;
