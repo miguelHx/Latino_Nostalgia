@@ -19,7 +19,7 @@ function LandingPage() {
                     </div>
                     <div className="card-selector">
                         <select
-                            defaultValue="2015"
+                            defaultValue={DEFAULT_YEAR}
                             onChange={e => setYear(e.target.value)}
                         >
                             <option value="2015">2015</option>
