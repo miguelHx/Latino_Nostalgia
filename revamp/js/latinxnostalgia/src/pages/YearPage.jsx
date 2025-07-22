@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router'
+import Videos from '../components/Videos';
 import './YearPage.css';
 
 const START_YEAR = 1985;
@@ -40,6 +41,7 @@ function YearPage() {
                     </select>
                 </div>
             </header>
+            <Videos />
         </>
     )
 }

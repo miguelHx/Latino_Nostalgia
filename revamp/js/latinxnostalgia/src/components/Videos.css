@@ -1,0 +1,15 @@
+#videos {
+    width: calc(100% - 480px);
+    margin-left: calc(480px / 2);
+    transition: ease all 0.5s;
+}
+
+.active #videos {
+    margin-left: 0px;
+}
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 121px;
+}
