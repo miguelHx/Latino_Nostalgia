@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router'
 import Videos from '../components/Videos'
 import Aside from '../components/Aside'
@@ -5,6 +6,8 @@ import './YearPage.css'
 
 const START_YEAR = 1985;
 const END_YEAR = 2015;
+
+let player;
 
 function renderYearOptions(year) {
     /**
@@ -23,6 +26,40 @@ function renderYearOptions(year) {
 }
 
 function YearPage() {
+
+    const onPlayerReady = () => {
+        player.stopVideo();
+    }
+    
+    const onPlayerStateChange = (event) => {
+        if (event.data === YT.PlayerState.ENDED) {
+            // song's ended, try to get new one from queue
+        }
+    }
+
+    const onYouTubeIframeAPIReady = () => {
+        console.log('ON YOUTUBE IFRAME API READY CALLED')
+        player = new YT.Player('player', {
+            height: '270',
+            width: '480',
+            videoId: 'y6y_4_b6RS8',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    useEffect(() => {
+        if (!window.YT) {
+            console.log('LOADING YT IFRAME API')
+            const tag = document.createElement('script');
+            tag.src = 'https://www.youtube.com/iframe_api';
+            window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+            let firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        }
+    }, []);
     const { year } = useParams();
     let navigate = useNavigate();
     return (
