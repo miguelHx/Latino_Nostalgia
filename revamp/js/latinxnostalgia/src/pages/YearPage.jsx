@@ -1,4 +1,4 @@
-import { useEffect, useState} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router'
 import Videos from '../components/Videos'
 import Aside from '../components/Aside'
@@ -26,20 +26,21 @@ function renderYearOptions(year) {
 function YearPage() {
     const [aVidHasBeenPlayed, setaVidHasBeenPlayed] = useState(false);
     const [currentVideo, setCurrentVideo] = useState(null);
-    const [player, setPlayer] = useState(null);
+    const playerRef = useRef(null);
     const [queue, setQueue] = useState([]);
+    const queueRef = useRef([]);
 
     const addToQueue = ({dataId, title, artist}) => {
         setQueue([
             ...queue,
             {title, artist, dataId}
         ])
+        queueRef.current.push({title, artist, dataId})
     }
 
     const loadVideo = ({dataId, title, artist}) => {
-        console.log('LOAD VID CALLED')
         // load video into youtube player
-        player.loadVideoById(dataId, 0, "large");
+        playerRef.current.loadVideoById(dataId, 0, "large");
 
         // populate #now-playing in Aside with current video name and artist
 
@@ -61,19 +62,29 @@ function YearPage() {
     const onInQueueClick = (index) => {
         loadVideo(queue[index])
         setQueue(queue.filter((_, i) => i !== index))
+        queueRef.current.splice(index, 1)
     }
     const onPlayerReady = (event) => {
         event.target.stopVideo();
     }
-    
+    const playNextSong = () => {
+        if (queueRef.current.length > 0) {
+            const song = queueRef.current[0]
+            loadVideo(song)
+            const copy = [...queueRef.current.slice(1)]
+            setQueue(copy)
+            queueRef.current = copy
+        }
+    }
     const onPlayerStateChange = (event) => {
         if (event.data === YT.PlayerState.ENDED) {
             // song's ended, try to get new one from queue
+            playNextSong()
         }
     }
 
     const onYouTubeIframeAPIReady = () => {
-        setPlayer(new YT.Player('player', {
+        playerRef.current = new YT.Player('player', {
             height: '270',
             width: '480',
             videoId: 'y6y_4_b6RS8',
@@ -81,17 +92,25 @@ function YearPage() {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
             }
-        }));
+        });
     }
 
     useEffect(() => {
         if (!window.YT) {
-            console.log('LOADING YT IFRAME API')
             const tag = document.createElement('script');
             tag.src = 'https://www.youtube.com/iframe_api';
             window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
             let firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        }
+        return () => {
+            // clean up player and window.YT on unmount
+            if (playerRef.current) {
+                playerRef.current.destroy()
+            }
+            if (window.YT) {
+                window.YT = null
+            }
         }
     }, []);
     const { year } = useParams();
