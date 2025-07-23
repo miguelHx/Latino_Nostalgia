@@ -37,6 +37,15 @@ aside h2 {
     background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+.queued-videos span {
+    text-align: center;
+}
+.queued-videos img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 #share-buttons {
     padding-bottom: 10px;
     padding-top: 0px;

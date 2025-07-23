@@ -15,7 +15,12 @@ function Video(props) {
                 src={`http://img.youtube.com/vi/${dataId}/mqdefault.jpg`}
                 onClick={(e) => videoClick(props)}
             />
-            <div className="addToQueue"><FontAwesomeIcon icon={faPlus} /></div>
+            <div
+                className="addToQueue"
+                onClick={(e) => props.addToQueue({title, artist, dataId})}
+            >
+                <FontAwesomeIcon icon={faPlus} />
+            </div>
             <p><strong>{artist}</strong> - {title}</p>
         </div>
     )

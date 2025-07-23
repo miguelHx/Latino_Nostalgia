@@ -27,7 +27,14 @@ function YearPage() {
     const [aVidHasBeenPlayed, setaVidHasBeenPlayed] = useState(false);
     const [currentVideo, setCurrentVideo] = useState(null);
     const [player, setPlayer] = useState(null);
-    console.log(player);
+    const [queue, setQueue] = useState([]);
+
+    const addToQueue = ({dataId, title, artist}) => {
+        setQueue([
+            ...queue,
+            {title, artist, dataId}
+        ])
+    }
 
     const loadVideo = ({dataId, title, artist}) => {
         console.log('LOAD VID CALLED')
@@ -50,6 +57,10 @@ function YearPage() {
         }
 
         // if iPhone remove aside closed
+    }
+    const onInQueueClick = (index) => {
+        loadVideo(queue[index])
+        setQueue(queue.filter((_, i) => i !== index))
     }
     const onPlayerReady = (event) => {
         event.target.stopVideo();
@@ -103,10 +114,11 @@ function YearPage() {
                 </div>
             </header>
             <Aside
-                aVidHasBeenPlayed={aVidHasBeenPlayed}
                 currentVideo={currentVideo}
+                queue={queue}
+                onInQueueClick={onInQueueClick}
             />
-            <Videos loadVideo={loadVideo} />
+            <Videos addToQueue={addToQueue} loadVideo={loadVideo} />
         </>
     )
 }

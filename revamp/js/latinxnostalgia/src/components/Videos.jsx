@@ -1,11 +1,11 @@
 import Video from './Video';
 import './Videos.css';
 
-function renderVideos(videoData, loadVideo) {
+function renderVideos(videoData, loadVideo, addToQueue) {
     const output = [];
     for (const vd of videoData) {
         output.push(
-            <Video key={`${vd.dataId}`} {...vd} loadVideo={loadVideo} />
+            <Video key={`${vd.dataId}`} {...vd} loadVideo={loadVideo} addToQueue={addToQueue} />
         )
     }
     return output;
@@ -23,7 +23,7 @@ function Videos(props) {
     return (
         <div id="videos">
             <div className="videos">
-                {renderVideos(testData, props.loadVideo)}
+                {renderVideos(testData, props.loadVideo, props.addToQueue)}
             </div>
         </div>
     )
