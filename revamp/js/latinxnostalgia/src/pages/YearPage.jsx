@@ -102,7 +102,10 @@ function YearPage() {
                     </select>
                 </div>
             </header>
-            <Aside currentVideo={currentVideo} />
+            <Aside
+                aVidHasBeenPlayed={aVidHasBeenPlayed}
+                currentVideo={currentVideo}
+            />
             <Videos loadVideo={loadVideo} />
         </>
     )
