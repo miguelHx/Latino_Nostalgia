@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState} from 'react';
 import { useParams, useNavigate } from 'react-router'
 import Videos from '../components/Videos'
 import Aside from '../components/Aside'
@@ -6,8 +6,6 @@ import './YearPage.css'
 
 const START_YEAR = 1985;
 const END_YEAR = 2015;
-
-let player;
 
 function renderYearOptions(year) {
     /**
@@ -26,9 +24,35 @@ function renderYearOptions(year) {
 }
 
 function YearPage() {
+    const [aVidHasBeenPlayed, setaVidHasBeenPlayed] = useState(false);
+    const [currentVideo, setCurrentVideo] = useState(null);
+    const [player, setPlayer] = useState(null);
+    console.log(player);
 
-    const onPlayerReady = () => {
-        player.stopVideo();
+    const loadVideo = ({dataId, title, artist}) => {
+        console.log('LOAD VID CALLED')
+        // load video into youtube player
+        player.loadVideoById(dataId, 0, "large");
+
+        // populate #now-playing in Aside with current video name and artist
+
+        // render share buttons (save for later)
+        setCurrentVideo({
+            title,
+            artist,
+            dataId
+        });
+
+        // update aVidHasBeenPlayed state and add className to root
+        if (!aVidHasBeenPlayed) {
+            document.getElementById('root').classList.add("active");
+            setaVidHasBeenPlayed(true);
+        }
+
+        // if iPhone remove aside closed
+    }
+    const onPlayerReady = (event) => {
+        event.target.stopVideo();
     }
     
     const onPlayerStateChange = (event) => {
@@ -38,8 +62,7 @@ function YearPage() {
     }
 
     const onYouTubeIframeAPIReady = () => {
-        console.log('ON YOUTUBE IFRAME API READY CALLED')
-        player = new YT.Player('player', {
+        setPlayer(new YT.Player('player', {
             height: '270',
             width: '480',
             videoId: 'y6y_4_b6RS8',
@@ -47,7 +70,7 @@ function YearPage() {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
             }
-        });
+        }));
     }
 
     useEffect(() => {
@@ -79,8 +102,8 @@ function YearPage() {
                     </select>
                 </div>
             </header>
-            <Aside />
-            <Videos />
+            <Aside currentVideo={currentVideo} />
+            <Videos loadVideo={loadVideo} />
         </>
     )
 }

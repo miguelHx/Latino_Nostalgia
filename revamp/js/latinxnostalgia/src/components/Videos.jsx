@@ -1,17 +1,17 @@
 import Video from './Video';
 import './Videos.css';
 
-function renderVideos(videoData) {
+function renderVideos(videoData, loadVideo) {
     const output = [];
     for (const vd of videoData) {
         output.push(
-            <Video key={`${vd.dataId}`} {...vd} />
+            <Video key={`${vd.dataId}`} {...vd} loadVideo={loadVideo} />
         )
     }
     return output;
 }
 
-function Videos() {
+function Videos(props) {
     const testData = [
         {title: "El Perdon", artist: "Nicky Jam y Enrique Iglesias", dataId: "hXI8RQYC36Q"},
         {title: "Propuesta Indecente", artist: "Romeo Santos", dataId: "QFs3PIZb3js"},
@@ -23,7 +23,7 @@ function Videos() {
     return (
         <div id="videos">
             <div className="videos">
-                {renderVideos(testData)}
+                {renderVideos(testData, props.loadVideo)}
             </div>
         </div>
     )

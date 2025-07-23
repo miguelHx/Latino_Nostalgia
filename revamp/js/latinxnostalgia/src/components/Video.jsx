@@ -2,14 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import './Video.css'
 
-function videoClick(data) {
-    console.log('clicked, ', data);
+function videoClick({ dataId, title, artist, loadVideo }) {
+    loadVideo({dataId, title, artist})
 
 }
 
 function Video(props) {
     const { dataId, title, artist } = props;
-    const { loadVideoOnAside } = props;
     return (
         <div className="video">
             <img
