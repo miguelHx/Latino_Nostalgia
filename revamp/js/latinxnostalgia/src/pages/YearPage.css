@@ -1,0 +1,71 @@
+#reduced {
+    height: 100px;
+    background-color: #31e2d9;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#header-home-title-reduced {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* selector from year page */
+.selector {
+    width: 65px;
+    height: 50px;
+    padding: 0;
+    background: transparent;
+    border: 3px solid white;
+    margin-left: 24px;
+    margin-top: 28px;
+    border-radius: 6px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.selector select {
+    overflow: visible;
+    text-transform: uppercase;
+    padding: 0px 5px; /* moves year inside selector */
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    color: white;
+    font: inherit;
+    line-height: normal;
+    font-weight: bold;
+    font-size: 22px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    border-radius: 6px;
+}
+.selector select option {
+    font-size: 30px;
+    background-color: #4CCFC8;
+    color: white;
+}
+.selector:hover {
+    background-color: white;
+}
+.selector select:hover {
+    color: #4CCFC8;
+}
+.hidden {
+    display: none;
+}
+#open-now-playing {
+    display: none;
+}
