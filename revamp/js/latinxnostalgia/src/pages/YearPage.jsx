@@ -29,6 +29,8 @@ function YearPage() {
     const playerRef = useRef(null);
     const [queue, setQueue] = useState([]);
     const queueRef = useRef([]);
+    const { year } = useParams();
+    let navigate = useNavigate();
 
     const addToQueue = ({dataId, title, artist}) => {
         setQueue([
@@ -115,8 +117,6 @@ function YearPage() {
             root.classList.remove('active')
         }
     }, []);
-    const { year } = useParams();
-    let navigate = useNavigate();
     return (
         <>
             <header id="reduced">

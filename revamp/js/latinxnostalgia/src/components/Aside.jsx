@@ -24,31 +24,41 @@ function Aside(props) {
             <strong>{currentVideo.title}</strong> - {currentVideo.artist}
         </>
     }
+    const isIphone = /iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     return (
         <aside>
             <div id="player"></div>
             <h2 id="now-playing">{nowPlayingText}</h2>
             <div id="share-buttons"></div>
-            <div className="g-bar">
-                <h3>Up Next</h3>
-                <div
-                    className="button"
-                    onClick={() => console.log('clicked skip')}
-                >
-                    Skip current song{' '}
-                    <FontAwesomeIcon icon={faStepForward} />
+            {!isIphone ? (
+                <div className="g-bar">
+                    <h3>Up Next</h3>
+                    <div
+                        className="button"
+                        onClick={() => console.log('clicked skip')}
+                    >
+                        Skip current song{' '}
+                        <FontAwesomeIcon icon={faStepForward} />
+                    </div>
                 </div>
-            </div>
+            ) : (
+                <></>
+            )}
+
             <div id="queue">
-                <div className="queued-videos">
-                    {renderQueue(queue, onInQueueClick)}
-                    {queue.length === 0 && (
-                        <>
-                            <p>Your queue is empty.<br />Click a <FontAwesomeIcon icon={faPlus} /> button to add a song to your queue.</p>
-                            <img src={addPic} />
-                        </>
-                    )}
-                </div>
+                {isIphone ? (
+                    <p>Tap video to play. No queue for iPhone sorry</p>
+                ) : (
+                    <div className="queued-videos">
+                        {renderQueue(queue, onInQueueClick)}
+                        {queue.length === 0 && (
+                            <>
+                                <p>Your queue is empty.<br />Click a <FontAwesomeIcon icon={faPlus} /> button to add a song to your queue.</p>
+                                <img src={addPic} />
+                            </>
+                        )}
+                    </div>
+                )}
             </div>
 
             <div id="close" onClick={() => {
