@@ -38,6 +38,11 @@ function YearPage() {
             {title, artist, dataId}
         ])
         queueRef.current.push({title, artist, dataId})
+        // if nothings playing, play the queued song
+        if (playerRef.current.getPlayerState() === YT.PlayerState.CUED ||
+            playerRef.current.getPlayerState() === YT.PlayerState.ENDED) {
+            playNextSong();
+        }
     }
 
     const loadVideo = ({dataId, title, artist}) => {
