@@ -142,6 +142,7 @@ function YearPage() {
                 currentVideo={currentVideo}
                 queue={queue}
                 onInQueueClick={onInQueueClick}
+                playNextSong={playNextSong}
             />
             <Videos addToQueue={addToQueue} loadVideo={loadVideo} />
         </>

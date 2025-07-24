@@ -17,7 +17,7 @@ function renderQueue(queue, onInQueueClick) {
 }
 
 function Aside(props) {
-    const { currentVideo, queue, onInQueueClick } = props;
+    const { currentVideo, queue, onInQueueClick, playNextSong } = props;
     let nowPlayingText = 'Now Playing'
     if (currentVideo) {
         nowPlayingText = <>
@@ -35,7 +35,7 @@ function Aside(props) {
                     <h3>Up Next</h3>
                     <div
                         className="button"
-                        onClick={() => console.log('clicked skip')}
+                        onClick={() => playNextSong()}
                     >
                         Skip current song{' '}
                         <FontAwesomeIcon icon={faStepForward} />
