@@ -37,8 +37,7 @@ function Aside(props) {
                         className="button"
                         onClick={() => playNextSong()}
                     >
-                        Skip current song{' '}
-                        <FontAwesomeIcon icon={faStepForward} />
+                        Skip current song <FontAwesomeIcon icon={faStepForward} />
                     </div>
                 </div>
             ) : (
