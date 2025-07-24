@@ -18,7 +18,8 @@ function Videos(props) {
         {title: "Fanatica Sensual", artist: "Plan B", dataId: "QvypZSdjO8M"},
         {title: "Eres Mia", artist: "Romeo Santos", dataId: "8iPcqtHoR3U"},
         {title: "Tocado y Hundido", artist: "Melendi", dataId: "1JwAr4ZxdMk"},
-        {title: "Odio", artist: "Romeo Santos ft. Drake", dataId: "W8r-eIhp4j0"}
+        {title: "Odio", artist: "Romeo Santos ft. Drake", dataId: "W8r-eIhp4j0"},
+        {title: "Fuiste Tu", artist: "Ricardo Arjona ft. Gaby Moreno", dataId: "I9cCPQVPv8o"}
     ]
     return (
         <div id="videos">
