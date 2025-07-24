@@ -111,6 +111,8 @@ function YearPage() {
             if (window.YT) {
                 window.YT = null
             }
+            const root = document.getElementById('root')
+            root.classList.remove('active')
         }
     }, []);
     const { year } = useParams();
