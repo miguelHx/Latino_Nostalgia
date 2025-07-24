@@ -66,3 +66,6 @@
 .hidden {
     display: none;
 }
+#open-now-playing {
+    display: none;
+}
