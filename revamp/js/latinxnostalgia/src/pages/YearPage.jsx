@@ -133,6 +133,10 @@ function YearPage() {
                         {renderYearOptions(year)}
                     </select>
                 </div>
+                <div className="button" id="open-now-playing" onClick={() => {
+                    let elem = document.querySelector('aside')
+                    elem.classList.remove('closed')
+                }}>Now Playing</div>
             </header>
             <Aside
                 currentVideo={currentVideo}

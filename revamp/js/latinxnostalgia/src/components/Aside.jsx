@@ -51,7 +51,10 @@ function Aside(props) {
                 </div>
             </div>
 
-            <div id="close" onClick={() => console.log('closeNowPlaying')}>
+            <div id="close" onClick={() => {
+                const elem = document.querySelector('aside')
+                elem.classList.add('closed')
+            }}>
                 <FontAwesomeIcon icon={faTimes} />
                 Back
             </div>
