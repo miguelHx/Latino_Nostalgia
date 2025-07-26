@@ -13,7 +13,7 @@ function renderQueue(queue, onInQueueClick) {
             </p>
         )
     }
-    return output
+    return output;
 }
 
 function Aside(props) {
@@ -68,7 +68,7 @@ function Aside(props) {
                 Back
             </div>
         </aside>
-    )
+    );
 }
 
 export default Aside;

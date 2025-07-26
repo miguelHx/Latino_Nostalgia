@@ -27,7 +27,7 @@ function Videos(props) {
                 {renderVideos(testData, props.loadVideo, props.addToQueue)}
             </div>
         </div>
-    )
+    );
 }
 
 export default Videos;

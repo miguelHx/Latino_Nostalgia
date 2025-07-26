@@ -23,7 +23,7 @@ function Video(props) {
             </div>
             <p><strong>{artist}</strong> - {title}</p>
         </div>
-    )
+    );
 
 }
 export default Video;

@@ -120,7 +120,7 @@ function YearPage() {
             }
             const root = document.getElementById('root')
             root.classList.remove('active')
-        }
+        };
     }, []);
     return (
         <>
@@ -151,6 +151,6 @@ function YearPage() {
             />
             <Videos addToQueue={addToQueue} loadVideo={loadVideo} />
         </>
-    )
+    );
 }
 export default YearPage;
