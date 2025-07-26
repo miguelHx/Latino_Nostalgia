@@ -10,7 +10,7 @@ def daterange(start_date: date, end_date: date):
         yield start_date + timedelta(n)
 
 def main():
-    START_YEAR = 1986
+    START_YEAR = 2017
     END_YEAR = 2025
     for year in range(START_YEAR, END_YEAR):
         start_dt = date(year, 1, 1)
