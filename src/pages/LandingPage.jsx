@@ -63,7 +63,7 @@ function LandingPage() {
                     <button
                         id="letsgo"
                         className="butn butn--stripe"
-                        onClick={e => navigate(`/year/${year}`)}
+                        onClick={_ => navigate(`/year/${year}`)}
                     >
                         Vamos
                     </button>

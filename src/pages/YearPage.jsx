@@ -39,8 +39,8 @@ function YearPage() {
         ])
         queueRef.current.push({title, artist, dataId})
         // if nothings playing, play the queued song
-        if (playerRef.current.getPlayerState() === YT.PlayerState.CUED ||
-            playerRef.current.getPlayerState() === YT.PlayerState.ENDED) {
+        if (playerRef.current.getPlayerState() === window.YT.PlayerState.CUED ||
+            playerRef.current.getPlayerState() === window.YT.PlayerState.ENDED) {
             playNextSong();
         }
     }
@@ -84,14 +84,14 @@ function YearPage() {
         }
     }
     const onPlayerStateChange = (event) => {
-        if (event.data === YT.PlayerState.ENDED) {
+        if (event.data === window.YT.PlayerState.ENDED) {
             // song's ended, try to get new one from queue
             playNextSong()
         }
     }
 
     const onYouTubeIframeAPIReady = () => {
-        playerRef.current = new YT.Player('player', {
+        playerRef.current = new window.YT.Player('player', {
             height: '270',
             width: '480',
             videoId: 'y6y_4_b6RS8',
@@ -121,14 +121,14 @@ function YearPage() {
             const root = document.getElementById('root')
             root.classList.remove('active')
         };
-    }, []);
+    });
     return (
         <>
             <header id="reduced">
                 <div id="header-home-content">
                     <p
                         id="header-home-title-reduced"
-                        onClick={e => navigate('/')}
+                        onClick={_ => navigate('/')}
                     >
                         Latino<br/>Nostalgia
                     </p>

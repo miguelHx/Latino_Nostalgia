@@ -13,11 +13,11 @@ function Video(props) {
         <div className="video">
             <img
                 src={`http://img.youtube.com/vi/${dataId}/mqdefault.jpg`}
-                onClick={(e) => videoClick(props)}
+                onClick={(_) => videoClick(props)}
             />
             <div
                 className="addToQueue"
-                onClick={(e) => props.addToQueue({title, artist, dataId})}
+                onClick={(_) => props.addToQueue({title, artist, dataId})}
             >
                 <FontAwesomeIcon icon={faPlus} />
             </div>
