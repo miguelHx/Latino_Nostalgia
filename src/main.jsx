@@ -1,12 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { HashRouter, Routes, Route } from 'react-router'
 import LandingPage from './pages/LandingPage.jsx'
 import YearPage from './pages/YearPage.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route index path="/" element={
         <StrictMode>
@@ -21,5 +21,5 @@ createRoot(document.getElementById('root')).render(
         } />
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 )
