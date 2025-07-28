@@ -13,11 +13,25 @@ function Video(props) {
         <div className="video">
             <img
                 src={`http://img.youtube.com/vi/${dataId}/mqdefault.jpg`}
-                onClick={(_) => videoClick(props)}
+                onClick={(_) => {
+                    videoClick(props)
+                    const animatedText = document.getElementById('open-now-playing')
+                    animatedText.classList.add('animation-zoom')
+                    setTimeout(() => {
+                        animatedText.classList.remove('animation-zoom')
+                    }, 1000)
+                }}
             />
             <div
                 className="addToQueue"
-                onClick={(_) => props.addToQueue({title, artist, dataId})}
+                onClick={(_) => {
+                    props.addToQueue({title, artist, dataId})
+                    const animatedText = document.getElementById('open-now-playing')
+                    animatedText.classList.add('animation-bounce')
+                    setTimeout(() => {
+                        animatedText.classList.remove('animation-bounce');
+                    }, 1000)
+                }}
             >
                 <FontAwesomeIcon icon={faPlus} />
             </div>
