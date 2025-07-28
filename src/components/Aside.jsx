@@ -1,5 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStepForward, faTimes, faPlus } from '@fortawesome/free-solid-svg-icons'
+import {
+    faStepForward,
+    faTimes,
+    faPlus,
+    faClipboard
+} from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import addPic from '../assets/add.png';
 import './Aside.css';
 
@@ -29,7 +35,34 @@ function Aside(props) {
         <aside>
             <div id="player"></div>
             <h2 id="now-playing">{nowPlayingText}</h2>
-            <div id="share-buttons"></div>
+            <div id="share-buttons">
+                {currentVideo && (
+                    <>
+                        <div
+                            className="button"
+                            id="copy-url"
+                            onClick={() => {
+                                navigator.clipboard.writeText(`https://www.youtube.com/watch?v=${currentVideo.dataId}`);
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faClipboard} /> Copy YouTube Link
+                        </div>
+                        <div
+                            className="button"
+                            onClick={() => console.log('fb share')}
+                        >
+                            <FontAwesomeIcon icon={faFacebook} /> Share
+                        </div>
+                        <a
+                            href={`https://x.com/intent/tweet?url=https://www.youtube.com/watch?v=${currentVideo.dataId}&text=${currentVideo.title} - ${currentVideo.artist}&hashtags=latinxnostalgia`}
+                            target="_blank"
+                            className="button"
+                        >
+                            <FontAwesomeIcon icon={faXTwitter} /> X
+                        </a>
+                    </>
+                )}
+            </div>
             {!isIphone ? (
                 <div className="g-bar">
                     <h3>Up Next</h3>
