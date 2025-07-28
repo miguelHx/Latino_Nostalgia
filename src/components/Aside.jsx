@@ -51,6 +51,11 @@ function Aside(props) {
                             id="copy-url"
                             onClick={() => {
                                 navigator.clipboard.writeText(`https://www.youtube.com/watch?v=${currentVideo.dataId}`);
+                                const animatedText = document.getElementById('copy-url')
+                                animatedText.classList.add('animation-bounce')
+                                setTimeout(() => {
+                                    animatedText.classList.remove('animation-bounce');
+                                }, 1000)
                             }}
                         >
                             <FontAwesomeIcon icon={faClipboard} /> Copy YouTube Link
