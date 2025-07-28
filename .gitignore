@@ -1,4 +1,6 @@
 dist/
+dist
+dist/*
 .DS_Store
 .vite
 # Byte-compiled / optimized / DLL files
