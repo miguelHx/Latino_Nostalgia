@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faStepForward,
@@ -23,7 +24,15 @@ function renderQueue(queue, onInQueueClick) {
 }
 
 function Aside(props) {
-    const { currentVideo, queue, onInQueueClick, playNextSong } = props;
+    const [isMaxWidth1024, setIsMaxWidth1024] = useState(
+        window.matchMedia("(max-width: 1024px)").matches
+    );
+    useEffect(() => {
+        window
+        .matchMedia("(max-width: 1024px)")
+        .addEventListener('change', e => setIsMaxWidth1024(e.matches))
+    }, [])
+    const { currentVideo, queue, onInQueueClick, playNextSong, doRenderQueueList, setDoRenderQueueList } = props;
     let nowPlayingText = 'Now Playing'
     if (currentVideo) {
         nowPlayingText = <>
@@ -73,19 +82,35 @@ function Aside(props) {
             </div>
             <div id="queue">
                 <div className="queued-videos">
-                    {renderQueue(queue, onInQueueClick)}
-                    {queue.length === 0 && (
+                    {/* anything under 1024px of width then now playing button will render if a vid has been clicked */}
+                    {!isMaxWidth1024 ? (
                         <>
-                            <p>Your queue is empty.<br />Click a <FontAwesomeIcon icon={faPlus} /> button to add a song to your queue.</p>
-                            <img src={addPic} />
+                            {renderQueue(queue, onInQueueClick)}
+                            {queue.length === 0 && (
+                                <>
+                                    <p>Your queue is empty.<br />Click a <FontAwesomeIcon icon={faPlus} /> button to add a song to your queue.</p>
+                                    <img src={addPic} />
+                                </>
+                            )}
                         </>
+                    ) : (doRenderQueueList && (
+                            <>
+                                {renderQueue(queue, onInQueueClick)}
+                                {queue.length === 0 && (
+                                    <>
+                                        <p>Your queue is empty.<br />Click a <FontAwesomeIcon icon={faPlus} /> button to add a song to your queue.</p>
+                                        <img src={addPic} />
+                                    </>
+                                )}
+                            </>
+                        )
                     )}
                 </div>
             </div>
-
             <div id="close" onClick={() => {
                 const elem = document.querySelector('aside')
                 elem.classList.add('closed')
+                setDoRenderQueueList(false)
             }}>
                 <FontAwesomeIcon icon={faTimes} />
                 Back

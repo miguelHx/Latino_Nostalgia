@@ -28,6 +28,7 @@ function YearPage() {
     const [currentVideo, setCurrentVideo] = useState(null);
     const playerRef = useRef(null);
     const [queue, setQueue] = useState([]);
+    const [doRenderQueueList, setDoRenderQueueList] = useState(false);
     const queueRef = useRef([]);
     const { year } = useParams();
     let navigate = useNavigate();
@@ -141,6 +142,7 @@ function YearPage() {
                 <div className="button" id="open-now-playing" onClick={() => {
                     let elem = document.querySelector('aside')
                     elem.classList.remove('closed')
+                    setDoRenderQueueList(true)
                 }}>Now Playing</div>
             </header>
             <Aside
@@ -148,6 +150,8 @@ function YearPage() {
                 queue={queue}
                 onInQueueClick={onInQueueClick}
                 playNextSong={playNextSong}
+                doRenderQueueList={doRenderQueueList}
+                setDoRenderQueueList={setDoRenderQueueList}
             />
             <Videos addToQueue={addToQueue} loadVideo={loadVideo} />
         </>
