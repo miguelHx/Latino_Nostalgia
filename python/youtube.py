@@ -1,5 +1,6 @@
 import googleapiclient.discovery
 import os
+import json
 
 try:
     YOUTUBE_API_KEY = os.environ['YOUTUBE_API_KEY']
@@ -77,7 +78,7 @@ class SearchResponse:
             self.search_results.append(search_result)
 
 
-def search_yt(query, max_results=8, page_token=None):
+def search_yt(query, max_results=4, page_token=None):
     # reference: https://developers.google.com/youtube/v3/docs/search/list
     # reference: https://developers.google.com/youtube/v3/guides/implementation/pagination
     request = youtube.search().list(
@@ -106,10 +107,39 @@ def get_video_view_count(id):
     view_count = response['items'][0]['statistics']['viewCount']
     return view_count
 
+def get_youtube_links_from_songs():
+    START_YEAR = 1986
+    END_YEAR = 1986
+    for year in range(START_YEAR, END_YEAR+1):
+        songs = []
+        file_path = f'data/{year}.json'
+        try:
+            with open(file_path) as f:
+                songs = json.load(f)
+                print('songs size: ', len(songs))
+                for song in songs:
+                    query = f'{song['artist']} {song['title']}'
+                    search_response = search_yt(query)
+                    video_id = search_response.search_results[0].video_id
+                    print(f'video id for song {query}: {video_id}')
+                    song['yt_id'] = video_id
+        except json.JSONDecodeError as e:
+            print(f'Error decoding JSON: {e}')
+        except FileNotFoundError:
+            print(f'File not found: {file_path}')
+        except googleapiclient.errors.HttpError as e:
+            print('Error youtube API: ', e)
+
+        if songs:
+            with open(f'data/{year}.json', 'w') as f:
+                json.dump(songs, f)
+        break
+
 def main():
-    search_response = search_yt('lil peep nuts')
-    display_yt_results(search_response)
-    print(f'view count: {get_video_view_count(search_response.search_results[0].video_id)}')
+    # search_response = search_yt('lil peep nuts')
+    # display_yt_results(search_response)
+    # print(f'view count: {get_video_view_count(search_response.search_results[0].video_id)}')
+    get_youtube_links_from_songs()
 
 if __name__ == '__main__':
     main()
