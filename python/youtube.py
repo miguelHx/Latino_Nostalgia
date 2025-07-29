@@ -3,13 +3,24 @@ import os
 import json
 
 try:
-    YOUTUBE_API_KEY = os.environ['YOUTUBE_API_KEY']
+    # YOUTUBE_API_KEY = os.environ['YOUTUBE_API_KEY']
+    # UTUBE_API_KEY2 = os.environ['UTUBE_API_KEY2']
+    # UTUBE_API_KEY3 = os.environ['UTUBE_API_KEY3']
+
+    # YOUTUBE_API_KEY = os.environ['UTUBE_API_KEY4']
+    # UTUBE_API_KEY2 = os.environ['UTUBE_API_KEY5']
+    # UTUBE_API_KEY3 = os.environ['UTUBE_API_KEY6']
+
+    YOUTUBE_API_KEY = os.environ['UTUBE_API_KEY7']
+    UTUBE_API_KEY2 = os.environ['UTUBE_API_KEY8']
+    UTUBE_API_KEY3 = os.environ['UTUBE_API_KEY9']
 except KeyError:
     print('Youtube api key env variable not set')
     exit()
 
 youtube = googleapiclient.discovery.build(serviceName='youtube', version='v3', developerKey=YOUTUBE_API_KEY)
-
+youtube2 = googleapiclient.discovery.build(serviceName='youtube', version='v3', developerKey=UTUBE_API_KEY2)
+youtube3 = googleapiclient.discovery.build(serviceName='youtube', version='v3', developerKey=UTUBE_API_KEY3)
 
 '''
 Search Results JSON
@@ -88,7 +99,36 @@ def search_yt(query, max_results=4, page_token=None):
         q=query,
         type="video", # only include videos, not playlists/channels
     )
-    response = request.execute()
+    try:
+        response = request.execute()
+    except googleapiclient.errors.HttpError as e:
+        print('error: probably exceeded quota limit.')
+        print('Going to try 2nd API key...')
+        try:
+            request2 = youtube2.search().list(
+                part="snippet", # search by keyword
+                maxResults=max_results,
+                pageToken=page_token, # optional, for going to next/prev result page
+                q=query,
+                type="video", # only include videos, not playlists/channels
+            )
+            response = request2.execute()
+        except googleapiclient.errors.HttpError as e:
+            print('2nd youtube api error: probably exceeded quota limit')
+            print('attempting 3rd api key...')
+            try:
+                request3 = youtube3.search().list(
+                    part="snippet", # search by keyword
+                    maxResults=max_results,
+                    pageToken=page_token, # optional, for going to next/prev result page
+                    q=query,
+                    type="video", # only include videos, not playlists/channels
+                )
+                response = request3.execute()
+            except googleapiclient.errors.HttpError as e:
+                print('3rd attempt api error: ', e)
+                print('no further attempts. Wait 24 hours.')
+                exit()
     search_response = SearchResponse(response)
     return search_response
 
@@ -108,8 +148,8 @@ def get_video_view_count(id):
     return view_count
 
 def get_youtube_links_from_songs():
-    START_YEAR = 1986
-    END_YEAR = 1986
+    START_YEAR = 1988
+    END_YEAR = 1988
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
         file_path = f'data/{year}.json'
@@ -125,10 +165,13 @@ def get_youtube_links_from_songs():
                     song['yt_id'] = video_id
         except json.JSONDecodeError as e:
             print(f'Error decoding JSON: {e}')
+            exit()
         except FileNotFoundError:
             print(f'File not found: {file_path}')
+            exit()
         except googleapiclient.errors.HttpError as e:
             print('Error youtube API: ', e)
+            exit()
 
         if songs:
             with open(f'data/{year}.json', 'w') as f:
