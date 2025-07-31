@@ -15,9 +15,13 @@ try:
     # UTUBE_API_KEY2 = os.environ['UTUBE_API_KEY8']
     # UTUBE_API_KEY3 = os.environ['UTUBE_API_KEY9']
 
-    YOUTUBE_API_KEY = os.environ['UTUBE_API_KEY10']
-    UTUBE_API_KEY2 = os.environ['UTUBE_API_KEY11']
-    UTUBE_API_KEY3 = os.environ['UTUBE_API_KEY12']
+    # YOUTUBE_API_KEY = os.environ['UTUBE_API_KEY10']
+    # UTUBE_API_KEY2 = os.environ['UTUBE_API_KEY11']
+    # UTUBE_API_KEY3 = os.environ['UTUBE_API_KEY12']
+
+    YOUTUBE_API_KEY = os.environ['UTUBE_API_KEY13']
+    UTUBE_API_KEY2 = os.environ['UTUBE_API_KEY14']
+    UTUBE_API_KEY3 = os.environ['UTUBE_API_KEY15']
 except KeyError:
     print('Youtube api key env variable not set')
     exit()
@@ -153,8 +157,8 @@ def get_video_view_count(id):
     return view_count
 
 def get_youtube_links_from_songs():
-    START_YEAR = 1991
-    END_YEAR = 1991
+    START_YEAR = 1992
+    END_YEAR = 1992
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
         file_path = f'data/{year}.json'
