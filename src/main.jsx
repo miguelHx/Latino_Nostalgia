@@ -9,7 +9,6 @@ var oldURL = window.location.href;
 
 function checkURLchange(){
     if(window.location.href !== oldURL){
-        alert(`url changed! current URL: ${window.location.href} old URL: ${oldURL}`);
         oldURL = window.location.href;
         gtag("event", "page_view", {
           page_path: window.location.pathname + window.location.search + window.location.hash,
