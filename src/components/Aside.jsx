@@ -67,7 +67,7 @@ function Aside(props) {
                             <FontAwesomeIcon icon={faFacebook} /> Share
                         </div>
                         <a
-                            href={`https://x.com/intent/tweet?url=https://www.youtube.com/watch?v=${currentVideo.dataId}&text=${currentVideo.title} - ${currentVideo.artist}&hashtags=latinxnostalgia`}
+                            href={`https://x.com/intent/tweet?url=https://www.youtube.com/watch?v=${currentVideo.dataId}&text=${currentVideo.title} - ${currentVideo.artist} via https://www.latinxnostalgia.com YouTube link:&hashtags=latinxnostalgia`}
                             target="_blank"
                             className="button"
                         >
