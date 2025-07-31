@@ -55,8 +55,8 @@ aside h2 {
     width: 100%;
     overflow: hidden;
     align-items: center;
-    border-bottom: 8px solid rgba(255, 255, 255, 0.1);
-    border-top: 8px solid rgba(255,255,255,0.1);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid rgba(255,255,255,0.1);
 }
 .g-bar h3, .g-bar div {
     width: 50%;
