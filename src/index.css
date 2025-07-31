@@ -131,7 +131,7 @@ body {
 @media all and (max-width: 600px) {
   #header-home-title-reduced {
     font-size: 23px;
-    margin-top: 19px;
+    margin-top: 23px;
   }
   iframe {
     width: 100%;

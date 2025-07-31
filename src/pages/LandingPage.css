@@ -46,6 +46,7 @@
     cursor: pointer;
     color: white;
     /* font: inherit; */
+    margin: 0 auto;
     font-size: 25px;
     font-weight: bold;
     line-height: normal;
