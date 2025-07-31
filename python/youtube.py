@@ -137,6 +137,7 @@ def search_yt(query, max_results=4, page_token=None):
     return search_response
 
 def display_yt_results(search_response):
+    print('search results array size: ', len(search_response.search_results))
     for search_result in search_response.search_results:
         print(f'Video ID: {search_result.video_id}')
         print(f'Title: {search_result.title}')
@@ -152,8 +153,8 @@ def get_video_view_count(id):
     return view_count
 
 def get_youtube_links_from_songs():
-    START_YEAR = 1989
-    END_YEAR = 1989
+    START_YEAR = 1991
+    END_YEAR = 1991
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
         file_path = f'data/{year}.json'
@@ -184,10 +185,12 @@ def get_youtube_links_from_songs():
         break
 
 def main():
-    # search_response = search_yt('lil peep nuts')
+    # search_response = search_yt('Millie Y Los Vecinos Calimin y Chulumein')
     # display_yt_results(search_response)
     # print(f'view count: {get_video_view_count(search_response.search_results[0].video_id)}')
     get_youtube_links_from_songs()
+    # get this song video id manually because youtube api fails to retrieve it:
+    # {"title": "Calimin y Chulumein", "artist": "Millie Y Los Vecinos"}
 
 if __name__ == '__main__':
     main()
