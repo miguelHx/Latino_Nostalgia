@@ -127,11 +127,8 @@ function YearPage() {
         <>
             <header id="reduced">
                 <div id="header-home-content">
-                    <p
-                        id="header-home-title-reduced"
-                        onClick={e => navigate('/')}
-                    >
-                        Latino<br/>Nostalgia
+                    <p id="header-home-title-reduced">
+                        Latinx<br/>Nostalgia
                     </p>
                 </div>
                 <div className="selector">

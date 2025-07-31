@@ -5,7 +5,7 @@ function Header() {
         <>
             <header id="home">
                 <div id="header-home-content">
-                    <p id="header-home-title">Latino<br />Nostalgia</p>
+                    <p id="header-home-title">Latinx<br />Nostalgia</p>
                 </div>
             </header>
         </>
