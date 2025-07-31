@@ -4,8 +4,8 @@ import Videos from '../components/Videos'
 import Aside from '../components/Aside'
 import './YearPage.css'
 
-const START_YEAR = 1985;
-const END_YEAR = 2015;
+const START_YEAR = 1986;
+const END_YEAR = 2024;
 
 function renderYearOptions(year) {
     /**
@@ -14,7 +14,7 @@ function renderYearOptions(year) {
      */
     const output = [];
     output.push(<option key={year}>{year}</option>);
-    for (let yr = START_YEAR; yr <= END_YEAR; yr++) {
+    for (let yr = END_YEAR; yr >= START_YEAR; yr--) {
         if (yr == year) {
             continue
         }
