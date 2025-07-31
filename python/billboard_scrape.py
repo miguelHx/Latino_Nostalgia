@@ -44,14 +44,16 @@ def prune_song_data():
     # so i think we'll remove songs from january instead of dec
     # of previous year. Yes.
     START_YEAR = 1986
-    END_YEAR = 1988
+    END_YEAR = 2024
+    prune_count = 0
     for year in range(START_YEAR, END_YEAR):
-        with open(f'test_data/{year}.json') as f:
+        with open(f'data/{year}.json') as f:
             songs_curr_year = json.load(f)
             songs_next_year = []
             print(f'year {year} songs size: ', len(songs_curr_year))
-            with open(f'test_data/{year+1}.json') as f2:
+            with open(f'data/{year+1}.json') as f2:
                 songs_next_year = json.load(f2)
+                songs_before_prune = len(songs_next_year)
                 print(f'year {year+1} songs size: ', len(songs_next_year))
                 for song_curr_year in songs_curr_year:
                     # check if index exists in songs_next_year
@@ -62,11 +64,14 @@ def prune_song_data():
                             index = i
                             break
                     if index != -1:
+                        prune_count += 1
                         songs_next_year.pop(index)
-                print(f'songs next year after pruning size: ', len(songs_next_year))
-            # if songs_next_year:
-            #     with open(f'test_data/{year+1}.json', 'w') as f3:
-            #         json.dump(songs_next_year, f3)
+                print(f'songs pruned this round: ', songs_before_prune - len(songs_next_year))
+            if songs_next_year:
+                with open(f'data/{year+1}.json', 'w') as f3:
+                    json.dump(songs_next_year, f3)
+        print(f'pruned so far: {prune_count}')
+    print(f'total prune count: {prune_count}')
 
 
 def main():
