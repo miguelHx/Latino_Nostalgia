@@ -14,7 +14,7 @@
     height: 180px;
 }
 .video:hover {
-    background-color: #32e2d9;
+    background-color: #1bc1b8;
     color: white;
 }
 .video:hover .addToQueue {

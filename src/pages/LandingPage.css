@@ -24,7 +24,7 @@
     height: 58px;
     padding: 0;
     background: transparent;
-    background-color: #32e2d9;
+    background-color: #1bc1b8;
     margin: 0 auto;
     border-radius: 6px;
     -webkit-transition: all .5s ease;
@@ -35,8 +35,7 @@
 .card-selector select {
     overflow: visible;
     text-transform: uppercase;
-    padding-top: 20px;
-    padding: 18px 38px;
+    text-align: center;
     width: 100%;
     height: 100%;
     border: none;
@@ -46,14 +45,16 @@
     appearance: none;
     cursor: pointer;
     color: white;
-    font: inherit;
+    /* font: inherit; */
+    font-size: 25px;
+    font-weight: bold;
     line-height: normal;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
 }
 
 .card-selector select option {
-    font-size: 20px;
+    /* font-size: 20px; */
     background-color: #00fff1;
     color: white;
 }
@@ -102,7 +103,7 @@
   padding: 16px 36px 22px;
   background-color: #fff;
   color: #4CCFC8;
-  border: 2px solid #31e2d9;
+  border: 2px solid #1bc1b8;
   border-radius: 6px;
   margin-bottom: 16px;
   -webkit-transition: all .5s ease;
@@ -121,20 +122,20 @@
   display: block;
   height: 7px;
   width: 100%;
-  background-image: -webkit-repeating-linear-gradient(45deg, #31e2d9, #31e2d9 1px, transparent 2px, transparent 5px);
-  background-image: repeating-linear-gradient(45deg, #31e2d9, #31e2d9 1px, transparent 2px, transparent 5px);
+  background-image: -webkit-repeating-linear-gradient(45deg, #1bc1b8, #1bc1b8 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(45deg, #1bc1b8, #1bc1b8 1px, transparent 2px, transparent 5px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-top: 1px solid #31e2d9;
+  border-top: 1px solid #1bc1b8;
   position: absolute;
   left: 0;
   bottom: 0;
   background-size: 7px 7px;
 }
 .butn--stripe:hover {
-  background-color: #31e2d9;
+  background-color: #1bc1b8;
   color: white;
-  border-color: #31e2d9;
+  border-color: #1bc1b8;
 }
 .butn--stripe:hover:after {
   background-image: -webkit-repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);

@@ -101,7 +101,7 @@ body {
   }
   #close:hover {
     background-color: white;
-    color: #32e2d9;
+    color: #1bc1b8;
   }
   .active aside {
     -webkit-trasnform: translateY(0%);
