@@ -35,6 +35,8 @@
 .card-selector select {
     overflow: visible;
     text-transform: uppercase;
+    padding-top: 20px;
+    padding: 16px 38px;
     text-align: center;
     width: 100%;
     height: 100%;
