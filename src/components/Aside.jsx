@@ -50,7 +50,7 @@ function Aside(props) {
                             className="button"
                             id="copy-url"
                             onClick={() => {
-                                navigator.clipboard.writeText(`https://www.youtube.com/watch?v=${currentVideo.dataId}`);
+                                navigator.clipboard.writeText(`https://www.youtube.com/watch?v=${currentVideo.yt_id}`);
                                 const animatedText = document.getElementById('copy-url')
                                 animatedText.classList.add('animation-bounce')
                                 setTimeout(() => {
@@ -67,7 +67,7 @@ function Aside(props) {
                             <FontAwesomeIcon icon={faFacebook} /> Compartir
                         </div>
                         <a
-                            href={`https://x.com/intent/tweet?url=https://www.youtube.com/watch?v=${currentVideo.dataId}&text=${currentVideo.title} - ${currentVideo.artist} via https://www.latinxnostalgia.com YouTube link:&hashtags=latinxnostalgia`}
+                            href={`https://x.com/intent/tweet?url=https://www.youtube.com/watch?v=${currentVideo.yt_id}&text=${currentVideo.title} - ${currentVideo.artist} via https://www.latinxnostalgia.com YouTube link:&hashtags=latinxnostalgia`}
                             target="_blank"
                             className="button"
                         >

@@ -2,17 +2,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import './Video.css'
 
-function videoClick({ dataId, title, artist, loadVideo }) {
-    loadVideo({dataId, title, artist})
+function videoClick({ yt_id, title, artist, loadVideo }) {
+    loadVideo({yt_id, title, artist})
 
 }
 
 function Video(props) {
-    const { dataId, title, artist } = props;
+    const { yt_id, title, artist } = props;
     return (
         <div className="video">
             <img
-                src={`http://img.youtube.com/vi/${dataId}/mqdefault.jpg`}
+                src={`http://img.youtube.com/vi/${yt_id}/mqdefault.jpg`}
                 onClick={(_) => {
                     videoClick(props)
                     const animatedText = document.getElementById('open-now-playing')
@@ -25,7 +25,7 @@ function Video(props) {
             <div
                 className="addToQueue"
                 onClick={(_) => {
-                    props.addToQueue({title, artist, dataId})
+                    props.addToQueue({title, artist, yt_id})
                     const animatedText = document.getElementById('open-now-playing')
                     animatedText.classList.add('animation-bounce')
                     setTimeout(() => {

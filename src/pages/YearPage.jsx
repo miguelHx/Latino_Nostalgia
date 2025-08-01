@@ -33,13 +33,14 @@ function YearPage() {
     const { year } = useParams();
     const location = useLocation();
     const navigate = useNavigate();
+    const [songs, setSongs] = useState([])
 
-    const addToQueue = ({dataId, title, artist}) => {
+    const addToQueue = ({yt_id, title, artist}) => {
         setQueue([
             ...queue,
-            {title, artist, dataId}
+            {title, artist, yt_id}
         ])
-        queueRef.current.push({title, artist, dataId})
+        queueRef.current.push({title, artist, yt_id})
         // if nothings playing, play the queued song
         if (playerRef.current.getPlayerState() === YT.PlayerState.CUED ||
             playerRef.current.getPlayerState() === YT.PlayerState.ENDED) {
@@ -47,9 +48,9 @@ function YearPage() {
         }
     }
 
-    const loadVideo = ({dataId, title, artist}) => {
+    const loadVideo = ({yt_id, title, artist}) => {
         // load video into youtube player
-        playerRef.current.loadVideoById(dataId, 0, "large");
+        playerRef.current.loadVideoById(yt_id, 0, "large");
 
         // populate #now-playing in Aside with current video name and artist
 
@@ -57,7 +58,7 @@ function YearPage() {
         setCurrentVideo({
             title,
             artist,
-            dataId
+            yt_id
         });
 
         // update aVidHasBeenPlayed state and add className to root
@@ -105,10 +106,7 @@ function YearPage() {
     }
 
     useEffect(() => {
-        // console.log('LOCATION CHANGE, RENDER NEW LIST OF VIDEOS', location)
-        console.log(year)
-        // placeholder, figure out how to get songs from json files
-        // and update videos state here
+        setSongs(window[`_${year}`])
     }, [location.key])
 
     useEffect(() => {
@@ -158,7 +156,7 @@ function YearPage() {
                 doRenderQueueList={doRenderQueueList}
                 setDoRenderQueueList={setDoRenderQueueList}
             />
-            <Videos addToQueue={addToQueue} loadVideo={loadVideo} />
+            <Videos year={year} songs={songs} addToQueue={addToQueue} loadVideo={loadVideo} />
         </>
     )
 }
