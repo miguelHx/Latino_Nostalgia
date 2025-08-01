@@ -118,12 +118,15 @@ def get_youtube_links_from_songs():
                 songs = json.load(f)
                 print('songs size: ', len(songs))
                 for song in songs:
-                    query = f'{song['artist']} {song['title']}'
-                    print(f'searching query: {query}')
-                    search_response = search_yt(query)
-                    video_id = search_response.search_results[0].video_id
-                    print(f'video id found: {video_id}')
-                    song['yt_id'] = video_id
+                    if 'yt_id' not in song:
+                        query = f'{song['artist']} {song['title']}'
+                        print(f'searching query: {query}')
+                        search_response = search_yt(query)
+                        video_id = search_response.search_results[0].video_id
+                        print(f'video id found: {video_id}')
+                        song['yt_id'] = video_id
+                    else:
+                        print(f'this song already has yt_id, skipping...')
         except json.JSONDecodeError as e:
             print(f'Error decoding JSON: {e}')
             exit()
@@ -132,6 +135,10 @@ def get_youtube_links_from_songs():
             exit()
         except googleapiclient.errors.HttpError as e:
             print('Error youtube API: ', e)
+            print('saving song data gathered so far...')
+            if songs:
+                with open(f'data/{year}.json', 'w') as f:
+                    json.dump(songs, f)
             exit()
 
         if songs:
