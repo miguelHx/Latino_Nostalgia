@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router'
+import { useParams, useNavigate, useLocation } from 'react-router'
 import Videos from '../components/Videos'
 import Aside from '../components/Aside'
 import './YearPage.css'
@@ -31,7 +31,8 @@ function YearPage() {
     const [doRenderQueueList, setDoRenderQueueList] = useState(true);
     const queueRef = useRef([]);
     const { year } = useParams();
-    let navigate = useNavigate();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const addToQueue = ({dataId, title, artist}) => {
         setQueue([
@@ -104,6 +105,13 @@ function YearPage() {
     }
 
     useEffect(() => {
+        // console.log('LOCATION CHANGE, RENDER NEW LIST OF VIDEOS', location)
+        console.log(year)
+        // placeholder, figure out how to get songs from json files
+        // and update videos state here
+    }, [location.key])
+
+    useEffect(() => {
         if (!window.YT) {
             const tag = document.createElement('script');
             tag.src = 'https://www.youtube.com/iframe_api';
@@ -132,7 +140,7 @@ function YearPage() {
                     </p>
                 </div>
                 <div className="selector">
-                    <select onChange={e => navigate(`/year/${e.target.value}`)}>
+                    <select key={location.key} onChange={e => navigate(`/year/${e.target.value}`)}>
                         {renderYearOptions(year)}
                     </select>
                 </div>
