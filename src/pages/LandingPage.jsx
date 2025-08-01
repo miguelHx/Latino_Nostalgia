@@ -33,7 +33,7 @@ function LandingPage() {
             <div className="card">
                 <div className="card-body">
                     <div className="card-step-1">
-                        <h3>Step 1: Choose Year</h3>
+                        <h3>Paso 1: Elige el año</h3>
                     </div>
                     <div className="card-selector">
                         <select
@@ -45,7 +45,7 @@ function LandingPage() {
                     </div>
 
                     <div className="card-step-1">
-                        <h3>Step 2: Listen</h3>
+                        <h3>Paso 2: Escucha</h3>
                     </div>
 
                     <button

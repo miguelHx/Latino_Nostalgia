@@ -58,13 +58,13 @@ function Aside(props) {
                                 }, 1000)
                             }}
                         >
-                            <FontAwesomeIcon icon={faClipboard} /> Copy YouTube Link
+                            <FontAwesomeIcon icon={faClipboard} /> Copiar enlace de YouTube
                         </div>
                         <div
                             className="button"
                             onClick={() => console.log('fb share')}
                         >
-                            <FontAwesomeIcon icon={faFacebook} /> Share
+                            <FontAwesomeIcon icon={faFacebook} /> Compartir
                         </div>
                         <a
                             href={`https://x.com/intent/tweet?url=https://www.youtube.com/watch?v=${currentVideo.dataId}&text=${currentVideo.title} - ${currentVideo.artist} via https://www.latinxnostalgia.com YouTube link:&hashtags=latinxnostalgia`}
@@ -77,12 +77,12 @@ function Aside(props) {
                 )}
             </div>
             <div className="g-bar">
-                <h3>Up Next</h3>
+                <h3>Arriba Siguiente</h3>
                 <div
                     className="button"
                     onClick={() => playNextSong()}
                 >
-                    Skip current song <FontAwesomeIcon icon={faStepForward} />
+                    Saltar esta canción <FontAwesomeIcon icon={faStepForward} />
                 </div>
             </div>
             <div id="queue">
@@ -93,7 +93,7 @@ function Aside(props) {
                             {renderQueue(queue, onInQueueClick)}
                             {queue.length === 0 && (
                                 <>
-                                    <p>Your queue is empty.<br />Click a <FontAwesomeIcon icon={faPlus} /> button to add a song to your queue.</p>
+                                    <p>Tu cola está vacía.<br />Haga clic en un <FontAwesomeIcon icon={faPlus} /> botón para añadir una canción a tu cola</p>
                                     <img src={addPic} />
                                 </>
                             )}
@@ -103,7 +103,7 @@ function Aside(props) {
                                 {renderQueue(queue, onInQueueClick)}
                                 {queue.length === 0 && (
                                     <>
-                                        <p>Your queue is empty.<br />Click a <FontAwesomeIcon icon={faPlus} /> button to add a song to your queue.</p>
+                                        <p>Tu cola está vacía.<br />Haga clic en un <FontAwesomeIcon icon={faPlus} /> botón para añadir una canción a tu cola</p>
                                         <img src={addPic} />
                                     </>
                                 )}
@@ -118,7 +118,7 @@ function Aside(props) {
                 setDoRenderQueueList(false)
             }}>
                 <FontAwesomeIcon icon={faTimes} />
-                Back
+                Atras
             </div>
         </aside>
     );

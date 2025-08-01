@@ -140,7 +140,7 @@ function YearPage() {
                     let elem = document.querySelector('aside')
                     elem.classList.remove('closed')
                     setDoRenderQueueList(true)
-                }}>Now Playing</div>
+                }}>Ahora Jugando</div>
             </header>
             <Aside
                 currentVideo={currentVideo}
