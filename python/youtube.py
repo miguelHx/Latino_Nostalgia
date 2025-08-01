@@ -9,8 +9,6 @@ except KeyError:
     exit()
 
 youtube = googleapiclient.discovery.build(serviceName='youtube', version='v3', developerKey=YOUTUBE_API_KEY)
-youtube2 = googleapiclient.discovery.build(serviceName='youtube', version='v3', developerKey=UTUBE_API_KEY2)
-youtube3 = googleapiclient.discovery.build(serviceName='youtube', version='v3', developerKey=UTUBE_API_KEY3)
 
 '''
 Search Results JSON
