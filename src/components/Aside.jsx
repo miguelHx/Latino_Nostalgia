@@ -77,7 +77,7 @@ function Aside(props) {
                 )}
             </div>
             <div className="g-bar">
-                <h3>Arriba Siguiente</h3>
+                <h3>Siguiente</h3>
                 <div
                     className="button"
                     onClick={() => playNextSong()}
