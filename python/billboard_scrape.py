@@ -73,10 +73,21 @@ def prune_song_data():
         print(f'pruned so far: {prune_count}')
     print(f'total prune count: {prune_count}')
 
+def count_songs():
+    START_YEAR = 1993
+    END_YEAR = 2024
+    count = 0
+    for year in range(START_YEAR, END_YEAR+1):
+        with open(f'data/{year}.json') as f:
+            songs = json.load(f)
+            print(f'song count for {year}: {len(songs)}')
+            count += len(songs)
+    print(f'songs count for {START_YEAR}-{END_YEAR}: {count}')
 
 def main():
     # billboard_scrape_latin_songs()
-    prune_song_data()
+    # prune_song_data()
+    count_songs()
 
 
 if __name__ == '__main__':
