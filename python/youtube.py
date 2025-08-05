@@ -121,7 +121,12 @@ def get_youtube_links_from_songs():
                     if 'yt_id' not in song:
                         query = f'{song['artist']} {song['title']}'
                         print(f'searching query: {query}')
-                        search_response = search_yt(query)
+                        try:
+                            search_response = search_yt(query)
+                        except Exception as e:
+                            print('exception: ', e)
+                            print('search query no result. Skipping this song.')
+                            continue
                         video_id = search_response.search_results[0].video_id
                         print(f'video id found: {video_id}')
                         song['yt_id'] = video_id
@@ -142,6 +147,10 @@ def get_youtube_links_from_songs():
             exit()
         except Exception as e:
             print('Exception occurred: ', e)
+            if songs:
+                with open(f'data/{year}.json', 'w') as f:
+                    json.dump(songs, f)
+            exit()
 
         if songs:
             with open(f'data/{year}.json', 'w') as f:
