@@ -147,9 +147,6 @@ def get_youtube_links_from_songs():
             exit()
         except Exception as e:
             print('Exception occurred: ', e)
-            if songs:
-                with open(f'data/{year}.json', 'w') as f:
-                    json.dump(songs, f)
             exit()
 
         if songs:
