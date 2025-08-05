@@ -123,6 +123,13 @@ def get_youtube_links_from_songs():
                         print(f'searching query: {query}')
                         try:
                             search_response = search_yt(query)
+                        except googleapiclient.errors.HttpError as e:
+                            print('Error youtube API: ', e)
+                            print('saving song data gathered so far...')
+                            if songs:
+                                with open(f'data/{year}.json', 'w') as f:
+                                    json.dump(songs, f)
+                            exit()
                         except Exception as e:
                             print('exception: ', e)
                             print('search query no result. Skipping this song.')
@@ -137,16 +144,6 @@ def get_youtube_links_from_songs():
             exit()
         except FileNotFoundError:
             print(f'File not found: {file_path}')
-            exit()
-        except googleapiclient.errors.HttpError as e:
-            print('Error youtube API: ', e)
-            print('saving song data gathered so far...')
-            if songs:
-                with open(f'data/{year}.json', 'w') as f:
-                    json.dump(songs, f)
-            exit()
-        except Exception as e:
-            print('Exception occurred: ', e)
             exit()
 
         if songs:
