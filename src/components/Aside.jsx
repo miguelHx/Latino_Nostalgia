@@ -62,7 +62,15 @@ function Aside(props) {
                         </div>
                         <div
                             className="button"
-                            onClick={() => console.log('fb share')}
+                            onClick={() => {
+                                FB.ui({
+                                    method: 'share',
+                                    href: `https://www.youtube.com/watch?v=${currentVideo.yt_id}`,
+                                    hashtag: '#latinxnostalgia.com'
+                                }, function(response){
+                                    console.log(response)
+                                });
+                            }}
                         >
                             <FontAwesomeIcon icon={faFacebook} /> Compartir
                         </div>
