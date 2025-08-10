@@ -13,25 +13,25 @@ const testData = [
         {title: "Despacito", artist: "Luis Fonsi & Daddy Yankee Featuring Justin Bieber", yt_id: "72UO0v5ESUo"}
 ]
 
-function renderVideos(videoData, loadVideo, addToQueue) {
-    if (!videoData || videoData.length === 0) {
-        videoData = testData;
-    }
-    const output = [];
-    for (const vd of videoData) {
-        output.push(
-            <Video key={`${vd.yt_id}`} {...vd} loadVideo={loadVideo} addToQueue={addToQueue} />
-        )
-    }
-    return output;
-}
-
 function Videos(props) {
     const {year, songs, loadVideo, addToQueue} = props;
+
+    const renderVideos = (videoData) => {
+        if (!videoData || videoData.length === 0) {
+            videoData = testData;
+        }
+        const output = [];
+        for (const vd of videoData) {
+            output.push(
+                <Video key={`${vd.yt_id}`} {...vd} loadVideo={loadVideo} addToQueue={addToQueue} />
+            )
+        }
+        return output;
+    }
     return (
         <div id="videos">
             <div key={year} className="videos">
-                {renderVideos(props.songs, props.loadVideo, props.addToQueue)}
+                {renderVideos(songs)}
             </div>
         </div>
     );
