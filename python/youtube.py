@@ -126,9 +126,8 @@ def get_youtube_links_from_songs():
                         except googleapiclient.errors.HttpError as e:
                             print('Error youtube API: ', e)
                             print('saving song data gathered so far...')
-                            if songs:
-                                with open(f'data/{year}.json', 'w') as f:
-                                    json.dump(songs, f)
+                            with open(f'data/{year}.json', 'w') as f:
+                                json.dump(songs, f)
                             exit()
                         except Exception as e:
                             print('exception: ', e)
