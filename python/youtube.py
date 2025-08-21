@@ -123,6 +123,7 @@ def get_youtube_links_from_songs():
                         print(f'searching query: {query}')
                         try:
                             search_response = search_yt(query)
+                            video_id = search_response.search_results[0].video_id
                         except googleapiclient.errors.HttpError as e:
                             print('Error youtube API: ', e)
                             print('saving song data gathered so far...')
@@ -133,7 +134,6 @@ def get_youtube_links_from_songs():
                             print('exception: ', e)
                             print('search query no result. Skipping this song.')
                             continue
-                        video_id = search_response.search_results[0].video_id
                         print(f'video id found: {video_id}')
                         song['yt_id'] = video_id
                     else:
