@@ -3,7 +3,7 @@ import os
 import json
 
 try:
-    YOUTUBE_API_KEY = os.environ['YOUTUBE_API_KEY']
+    YOUTUBE_API_KEY = os.environ['YT']
 except KeyError:
     print('Youtube api key env variable not set')
     exit()
