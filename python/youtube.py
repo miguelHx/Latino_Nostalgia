@@ -108,8 +108,8 @@ def get_video_view_count(id):
     return view_count
 
 def get_youtube_links_from_songs():
-    START_YEAR = 2019
-    END_YEAR = 2019
+    START_YEAR = 2020
+    END_YEAR = 2020
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
         file_path = f'data/{year}.json'
@@ -119,7 +119,7 @@ def get_youtube_links_from_songs():
                 print('songs size: ', len(songs))
                 for song in songs:
                     if 'yt_id' not in song:
-                        query = f'{song['artist']} {song['title']}'
+                        query = f'{song["artist"]} {song["title"]}'
                         print(f'searching query: {query}')
                         try:
                             search_response = search_yt(query)
