@@ -108,8 +108,8 @@ def get_video_view_count(id):
     return view_count
 
 def get_youtube_links_from_songs():
-    START_YEAR = 2023
-    END_YEAR = 2023
+    START_YEAR = 2024
+    END_YEAR = 2024
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
         file_path = f'data/{year}.json'
