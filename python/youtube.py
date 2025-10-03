@@ -108,7 +108,7 @@ def get_video_view_count(id):
     return view_count
 
 def get_youtube_links_from_songs():
-    START_YEAR = 2024
+    START_YEAR = 2021
     END_YEAR = 2024
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
@@ -116,6 +116,7 @@ def get_youtube_links_from_songs():
         try:
             with open(file_path) as f:
                 songs = json.load(f)
+                print('year: ', year)
                 print('songs size: ', len(songs))
                 for song in songs:
                     if 'yt_id' not in song:
@@ -148,7 +149,6 @@ def get_youtube_links_from_songs():
         if songs:
             with open(f'data/{year}.json', 'w') as f:
                 json.dump(songs, f)
-        break
 
 def main():
     # search_response = search_yt('Millie Y Los Vecinos Calimin y Chulumein')
