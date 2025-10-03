@@ -107,6 +107,67 @@ def get_video_view_count(id):
     view_count = response['items'][0]['statistics']['viewCount']
     return view_count
 
+def get_video_view_counts_from_songs():
+    START_YEAR = 2002
+    END_YEAR = 2024
+    for year in range(START_YEAR, END_YEAR+1):
+        songs = []
+        file_path = f'data/{year}.json'
+        try:
+            with open(file_path) as f:
+                songs = json.load(f)
+                print('year: ', year)
+                for song in songs:
+                    if 'views' not in song:
+                        try:
+                            view_count = get_video_view_count(song['yt_id'])
+                        except googleapiclient.errors.HttpError as e:
+                            print('Error youtube API: ', e)
+                            print('saving song data gathered so far...')
+                            with open(f'data/{year}.json', 'w') as f:
+                                json.dump(songs, f)
+                            exit()
+                        except Exception as e:
+                            print('exception: ', e)
+                            print('no result for song: ', song)
+                            continue
+                        print('view count found: ', view_count, song)
+                        song['views'] = view_count
+                    else:
+                        print('this song has view count already...')
+        except json.JSONDecodeError as e:
+            print(f'Error decoding JSON: {e}')
+            exit()
+        except FileNotFoundError:
+            print(f'File not found: {file_path}')
+            exit()
+        if songs:
+            with open(f'data/{year}.json', 'w') as f:
+                json.dump(songs, f)
+
+def sort_songs():
+    START_YEAR = 1986
+    END_YEAR = 1986
+    for year in range(START_YEAR, END_YEAR+1):
+        songs = []
+        file_path = f'data/{year}.json'
+        try:
+            with open(file_path) as f:
+                songs = json.load(f)
+                print('year: ', year)
+                print('sorting...')
+                songs.sort(key=lambda x: int(x['views']), reverse=True)
+                print('top 5: ', songs[0:5])
+        except json.JSONDecodeError as e:
+            print(f'Error decoding JSON: {e}')
+            exit()
+        except FileNotFoundError:
+            print(f'File not found: {file_path}')
+            exit()
+        if songs:
+            with open(f'data/{year}.json', 'w') as f:
+                json.dump(songs, f)
+
 def get_youtube_links_from_songs():
     START_YEAR = 2021
     END_YEAR = 2024
@@ -154,9 +215,11 @@ def main():
     # search_response = search_yt('Millie Y Los Vecinos Calimin y Chulumein')
     # display_yt_results(search_response)
     # print(f'view count: {get_video_view_count(search_response.search_results[0].video_id)}')
-    get_youtube_links_from_songs()
+    # get_youtube_links_from_songs()
     # get this song video id manually because youtube api fails to retrieve it:
     # {"title": "Calimin y Chulumein", "artist": "Millie Y Los Vecinos"}
+    # get_video_view_counts_from_songs()
+    sort_songs()
 
 if __name__ == '__main__':
     main()
