@@ -36,11 +36,13 @@ function YearPage() {
     const [songs, setSongs] = useState([])
 
     const addToQueue = ({yt_id, title, artist}) => {
-        setQueue([
+        const newQueue = [
             ...queue,
             {title, artist, yt_id}
-        ])
+        ]
+        setQueue(newQueue)
         queueRef.current.push({title, artist, yt_id})
+        localStorage.setItem('songsQueue', JSON.stringify(newQueue))
         // if nothings playing, play the queued song
         if (playerRef.current.getPlayerState() === YT.PlayerState.CUED ||
             playerRef.current.getPlayerState() === YT.PlayerState.ENDED) {
@@ -71,8 +73,10 @@ function YearPage() {
     }
     const onInQueueClick = (index) => {
         loadVideo(queue[index])
-        setQueue(queue.filter((_, i) => i !== index))
+        const newQ = queue.filter((_, i) => i !== index)
+        setQueue(newQ)
         queueRef.current.splice(index, 1)
+        localStorage.setItem('songsQueue', JSON.stringify(newQ))
     }
     const onPlayerReady = (event) => {
         event.target.stopVideo();
@@ -84,6 +88,7 @@ function YearPage() {
             const copy = [...queueRef.current.slice(1)]
             setQueue(copy)
             queueRef.current = copy
+            localStorage.setItem('songsQueue', JSON.stringify(copy))
         }
     }
     const onPlayerStateChange = (event) => {
@@ -128,7 +133,17 @@ function YearPage() {
             const root = document.getElementById('root')
             root.classList.remove('active')
         }
-    }, []);
+    }, [])
+
+    useEffect(() => {
+        const savedQueue = localStorage.getItem('songsQueue');
+        if (savedQueue) {
+            const parsed = JSON.parse(savedQueue);
+            setQueue(parsed)
+            queueRef.current = parsed
+        }
+    }, [])
+
     return (
         <>
             <header id="reduced">
