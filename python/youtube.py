@@ -108,7 +108,7 @@ def get_video_view_count(id):
     return view_count
 
 def get_video_view_counts_from_songs():
-    START_YEAR = 2002
+    START_YEAR = 1986
     END_YEAR = 2024
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
@@ -130,7 +130,7 @@ def get_video_view_counts_from_songs():
                         except Exception as e:
                             print('exception: ', e)
                             print('no result for song: ', song)
-                            continue
+                            exit()
                         print('view count found: ', view_count, song)
                         song['views'] = view_count
                     else:
@@ -147,7 +147,7 @@ def get_video_view_counts_from_songs():
 
 def sort_songs():
     START_YEAR = 1986
-    END_YEAR = 1986
+    END_YEAR = 2024
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
         file_path = f'data/{year}.json'
@@ -218,8 +218,8 @@ def main():
     # get_youtube_links_from_songs()
     # get this song video id manually because youtube api fails to retrieve it:
     # {"title": "Calimin y Chulumein", "artist": "Millie Y Los Vecinos"}
-    # get_video_view_counts_from_songs()
-    sort_songs()
+    get_video_view_counts_from_songs()
+    # sort_songs()
 
 if __name__ == '__main__':
     main()
