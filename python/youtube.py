@@ -211,6 +211,30 @@ def get_youtube_links_from_songs():
             with open(f'data/{year}.json', 'w') as f:
                 json.dump(songs, f)
 
+def print_years_javascript():
+    START_YEAR = 1986
+    END_YEAR = 2024
+    for year in range(START_YEAR, END_YEAR+1):
+        songs = []
+        file_path = f'data/{year}.json'
+        try:
+            with open(file_path) as f:
+                songs_file = json.load(f)
+                keys_to_exclude = ['views']
+                for song in songs_file:
+                    songs.append(
+                        {key: value for key, value in song.items() if key not in keys_to_exclude}
+                    )
+        except json.JSONDecodeError as e:
+            print(f'Error decoding JSON: {e}')
+            exit()
+        except FileNotFoundError:
+            print(f'File not found: {file_path}')
+            exit()
+
+        if songs:
+            print(f'var _{year} = {songs}')
+
 def main():
     # search_response = search_yt('Millie Y Los Vecinos Calimin y Chulumein')
     # display_yt_results(search_response)
@@ -219,7 +243,8 @@ def main():
     # get this song video id manually because youtube api fails to retrieve it:
     # {"title": "Calimin y Chulumein", "artist": "Millie Y Los Vecinos"}
     # get_video_view_counts_from_songs()
-    sort_songs()
+    # sort_songs()
+    print_years_javascript()
 
 if __name__ == '__main__':
     main()
