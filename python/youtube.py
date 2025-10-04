@@ -218,8 +218,8 @@ def main():
     # get_youtube_links_from_songs()
     # get this song video id manually because youtube api fails to retrieve it:
     # {"title": "Calimin y Chulumein", "artist": "Millie Y Los Vecinos"}
-    get_video_view_counts_from_songs()
-    # sort_songs()
+    # get_video_view_counts_from_songs()
+    sort_songs()
 
 if __name__ == '__main__':
     main()
