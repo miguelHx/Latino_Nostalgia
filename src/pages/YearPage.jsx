@@ -28,7 +28,7 @@ function YearPage() {
     const [currentVideo, setCurrentVideo] = useState(null);
     const playerRef = useRef(null);
     const [queue, setQueue] = useState([]);
-    const [doRenderQueueList, setDoRenderQueueList] = useState(false);
+    const [doRenderQueueList, setDoRenderQueueList] = useState(true);
     const queueRef = useRef([]);
     const { year } = useParams();
     const location = useLocation();
