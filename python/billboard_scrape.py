@@ -92,7 +92,7 @@ def prune_song_data_optimized():
                         prune_count += 1
                         continue
                     new_songs_next_year.append(s)
-                print(f'songs pruned this round: ', songs_before_prune - len(songs_next_year))
+                print(f'songs pruned this round: ', songs_before_prune - len(new_songs_next_year))
             if new_songs_next_year:
                 with open(f'data/{year+1}.json', 'w') as f3:
                     json.dump(new_songs_next_year, f3)
