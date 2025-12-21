@@ -2,10 +2,6 @@
 
 Welcome ! This is Latinx Nostalgia, a nostalgic music website. Music is one of the closest things we have to a time machine, because memories may be attached to songs.
 
-As of 8/1/25, I am still gathering youtube ids from the lists of popular songs for each year.  Youtube API limits me to 100 requests per day so with a total of 7663 songs, this will take about 76 days :(.
-
-I will update the website as I gather the youtube ids.
-
 The website is live at this link: [https://www.latinxnostalgia.com](https://www.latinxnostalgia.com)
 
 Here are some screenshots:
