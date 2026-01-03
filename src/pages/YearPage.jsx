@@ -43,7 +43,6 @@ function YearPage() {
         setQueue(newQueue)
         queueRef.current.push({title, artist, yt_id})
         localStorage.setItem('songsQueue', JSON.stringify(newQueue))
-        // if nothings playing, play the queued song
         if (playerRef.current.getPlayerState() === YT.PlayerState.CUED ||
             playerRef.current.getPlayerState() === YT.PlayerState.ENDED) {
             playNextSong();
@@ -51,25 +50,16 @@ function YearPage() {
     }
 
     const loadVideo = ({yt_id, title, artist}) => {
-        // load video into youtube player
         playerRef.current.loadVideoById(yt_id, 0, "large");
-
-        // populate #now-playing in Aside with current video name and artist
-
-        // render share buttons (save for later)
         setCurrentVideo({
             title,
             artist,
             yt_id
         });
-
-        // update aVidHasBeenPlayed state and add className to root
         if (!aVidHasBeenPlayed) {
             document.getElementById('root').classList.add("active");
             setaVidHasBeenPlayed(true);
         }
-
-        // if iPhone remove aside closed
     }
     const onInQueueClick = (index) => {
         loadVideo(queue[index])
