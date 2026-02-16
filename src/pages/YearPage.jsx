@@ -147,6 +147,15 @@ function YearPage() {
                         {renderYearOptions(year)}
                     </select>
                 </div>
+                <div id="header-try-english-container">
+                    <a
+                        id="header-try-english-text"
+                        href='http://thenostalgiamachine.com/'
+                        target='_blank'
+                    >
+                        prueba también en inglés
+                    </a>
+                </div>
                 <div className="button" id="open-now-playing" onClick={() => {
                     let elem = document.querySelector('aside')
                     elem.classList.remove('closed')
