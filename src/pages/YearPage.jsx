@@ -143,7 +143,10 @@ function YearPage() {
                     </p>
                 </div>
                 <div className="selector">
-                    <select key={location.key} onChange={e => navigate(`/year/${e.target.value}`)}>
+                    <select key={location.key} onChange={e => {
+                        navigate(`/year/${e.target.value}`)
+                        window.scrollTo(0,0)
+                    }}>
                         {renderYearOptions(year)}
                     </select>
                 </div>
