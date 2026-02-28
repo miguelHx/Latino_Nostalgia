@@ -10,9 +10,9 @@ def daterange(start_date: date, end_date: date):
         yield start_date + timedelta(n)
 
 def billboard_scrape_latin_songs():
-    START_YEAR = 2017
+    START_YEAR = 2025
     END_YEAR = 2025
-    for year in range(START_YEAR, END_YEAR):
+    for year in range(START_YEAR, END_YEAR+1):
         start_dt = date(year, 1, 1)
         end_dt = date(year, 12, 31)
         year_songs = set()
@@ -44,7 +44,7 @@ def prune_song_data():
     # so i think we'll remove songs from january instead of dec
     # of previous year. Yes.
     START_YEAR = 1986
-    END_YEAR = 2024
+    END_YEAR = 2025
     prune_count = 0
     for year in range(START_YEAR, END_YEAR):
         with open(f'data/{year}.json') as f:
@@ -111,10 +111,10 @@ def count_songs():
     print(f'songs count for {START_YEAR}-{END_YEAR}: {count}')
 
 def main():
-    # billboard_scrape_latin_songs()
+    billboard_scrape_latin_songs()
     # prune_song_data()
     # count_songs()
-    prune_song_data_optimized()
+    # prune_song_data_optimized()
 
 
 if __name__ == '__main__':
