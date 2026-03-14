@@ -4,9 +4,9 @@ import Header from '../components/Header';
 
 import './LandingPage.css';
 
-const DEFAULT_YEAR = 2024;
+const DEFAULT_YEAR = 2025;
 const START_YEAR = 1986;
-const END_YEAR = 2024
+const END_YEAR = 2025;
 
 function renderYearOptions(year) {
     /**

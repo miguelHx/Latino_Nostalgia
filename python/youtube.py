@@ -108,8 +108,8 @@ def get_video_view_count(id):
     return view_count
 
 def get_video_view_counts_from_songs():
-    START_YEAR = 1986
-    END_YEAR = 2024
+    START_YEAR = 2025
+    END_YEAR = 2025
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
         file_path = f'data/{year}.json'
@@ -146,8 +146,8 @@ def get_video_view_counts_from_songs():
                 json.dump(songs, f)
 
 def sort_songs():
-    START_YEAR = 1986
-    END_YEAR = 2024
+    START_YEAR = 2025
+    END_YEAR = 2025
     for year in range(START_YEAR, END_YEAR+1):
         songs = []
         file_path = f'data/{year}.json'
@@ -239,12 +239,12 @@ def main():
     # search_response = search_yt('Millie Y Los Vecinos Calimin y Chulumein')
     # display_yt_results(search_response)
     # print(f'view count: {get_video_view_count(search_response.search_results[0].video_id)}')
-    get_youtube_links_from_songs()
+    # get_youtube_links_from_songs()
     # get this song video id manually because youtube api fails to retrieve it:
     # {"title": "Calimin y Chulumein", "artist": "Millie Y Los Vecinos"}
     # get_video_view_counts_from_songs()
     # sort_songs()
-    # print_years_javascript()
+    print_years_javascript()
 
 if __name__ == '__main__':
     main()
