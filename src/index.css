@@ -4,6 +4,10 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+aside {
+  overflow-y: auto;
+}
 /* media queries */
 @media all and (max-width: 1500px) {
   aside {
