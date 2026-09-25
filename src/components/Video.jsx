@@ -8,7 +8,7 @@ function videoClick({ yt_id, title, artist, loadVideo }) {
 }
 
 function Video(props) {
-    const { yt_id, title, artist } = props;
+    const {title, artist, yt_id} = props;
     return (
         <div className="video">
             <img

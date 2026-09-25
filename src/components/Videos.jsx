@@ -17,13 +17,13 @@ function Videos(props) {
     const {year, songs, loadVideo, addToQueue} = props;
 
     const renderVideos = (videoData) => {
-        if (!videoData || videoData.length === 0) {
-            videoData = testData;
-        }
+        // if (!videoData || videoData.length === 0) {
+        //     videoData = testData;
+        // }
         const output = [];
         for (const vd of videoData) {
             output.push(
-                <Video key={`${vd.yt_id}`} {...vd} loadVideo={loadVideo} addToQueue={addToQueue} />
+                <Video key={`${vd[2]}`} title={vd[0]} artist={vd[1]} yt_id={vd[2]} loadVideo={loadVideo} addToQueue={addToQueue} />
             )
         }
         return output;
