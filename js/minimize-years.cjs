@@ -25,6 +25,8 @@ lineReader.on('close', function () {
       for (var index = 0; index < global[year].length; index++) {
         var {title, artist, yt_id} = global[year][index];
         // console.log(title, artist, yt_id);
+        title = title.replaceAll('\"', '\'');
+        artist = artist.replaceAll('\"', '\'');
         if (index !== lastIdx) {
           s += `["${title}", "${artist}", "${yt_id}"], `
         } else {
